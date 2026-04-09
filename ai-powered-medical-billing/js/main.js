@@ -311,7 +311,7 @@ $(".contact-us").on("submit", function (e) {
   const jsonBody = {};
   formData.forEach((value, key) => { jsonBody[key] = value; });
 
-  fetch("/api/submit-lead", {
+  fetch("/api/submit-lead/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(jsonBody),

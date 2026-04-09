@@ -99,11 +99,14 @@ export default async function handler(req, res) {
           Company: practiceName || practice_name || company || "",
           Description: message || "",
           Lead_Source: "Landing Page",
+          Lead_Status: "Not Contacted",
           UTM_Source: utmSource || utm_source || "",
           UTM_Medium: utmMedium || utm_medium || "",
           UTM_Campaign: utmCampaign || utm_campaign || "",
         },
       ],
+      // Trigger Zoho CRM workflow rules (including email notification workflows)
+      trigger: ["workflow", "approval", "blueprint"],
     };
 
     const crmRes = await fetch("https://www.zohoapis.com/crm/v2/Leads", {

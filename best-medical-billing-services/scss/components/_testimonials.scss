@@ -1,0 +1,195 @@
+.testimonial-section {
+  
+  background-color: #D1EEF84D;
+  padding-block: rem(100px);
+  overflow: hidden;
+  .section-header {
+    margin-bottom: rem(48px);
+
+    h2 {
+      font-size: rem(58px);
+      margin-bottom: rem(10px);
+      line-height: 1;
+    }
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(300px), 1fr));
+    gap: rem(32px);
+    max-width: 1568px;
+    margin-inline: auto;
+
+    .testimonial-card {
+      background: var(--white);
+      padding: rem(33px);
+      border-radius: rem(20px);
+      box-shadow: 0px 4px 6px -4px #0000001a, 0px 10px 15px -3px #0000001a;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 1px solid #f3f4f6;
+      svg {
+        width: rem(48px);
+        height: rem(48px);
+      }
+      .stars {
+        padding-block: rem(2px);
+        svg {
+          width: rem(20px);
+        }
+      }
+
+      p {
+        font-size: rem(20px);
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: rem(40px);
+        color: #19191a;
+      }
+
+      .bottom {
+        border-top: 1px solid transparent;
+        border-radius: 0;
+        background: linear-gradient(#fff, #fff) padding-box,
+          linear-gradient(
+              90deg,
+              rgba(41, 96, 234, 0) 0%,
+              rgba(41, 96, 234, 0.2) 0%,
+              rgba(41, 96, 234, 0.4) 30%,
+              rgba(0, 0, 0, 0) 80%
+            )
+            border-box;
+      }
+
+      .author {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+        margin-top: rem(20px);
+
+        .avatar {
+          width: rem(50px);
+          height: rem(50px);
+          background: linear-gradient(180deg, #2960ea 0%, #d3287c 100%);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: rem(16px);
+          font-weight: 400;
+          color: #fff;
+        }
+        .info {
+          strong {
+            font-weight: 400;
+            font-style: Regular;
+            font-size: rem(20px);
+            line-height: rem(24px);
+          }
+          p {
+            margin: 0;
+            padding: 0;
+            font-size: rem(16px);
+            line-height: 1;
+            font-weight: 400;
+            color: #4a5565;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonial-section {
+    padding-block: mrem(50px);
+    .section-header {
+      margin-bottom: mrem(48px);
+
+      h2 {
+        font-size: mrem(24px);
+        margin-bottom: mrem(0px);
+        line-height: 1;
+      }
+    }
+
+    .testimonials-grid {
+      display: flex;
+
+      gap: mrem(8px);
+      max-width: 100%;
+
+      .slick-track {
+        display: flex;
+        width: 100%;
+        gap: mrem(5px);
+      }
+
+      .slick-slide {
+        height: auto !important;
+      }
+      .slick-dots {
+        bottom: mrem(-40px);
+        li {
+          width: fit-content;
+          button {
+            width: fit-content;
+            &:before {
+              height: mrem(10px);
+              width: mrem(10px);
+            }
+          }
+        }
+      }
+      .testimonial-card {
+        height: 100%;
+        padding: mrem(20px);
+        padding-top: mrem(30px);
+        border-radius: mrem(12px);
+        box-shadow: 0px 4px 6px -4px #0000001a, 0px 10px 15px -3px #0000001a;
+        margin-bottom: mrem(20px);
+        padding-bottom: 0;
+
+        svg {
+          width: mrem(29px);
+          height: mrem(29px);
+        }
+        .stars {
+          padding-block: mrem(0px);
+          padding-bottom: mrem(10px);
+          svg {
+            width: mrem(12px);
+          }
+        }
+
+        p {
+          font-size: mrem(14px);
+          margin-bottom: mrem(30px);
+        }
+
+        .author {
+          gap: mrem(16px);
+          margin-top: mrem(20px);
+          margin-bottom: mrem(20px);
+
+          .avatar {
+            width: mrem(48px);
+            height: mrem(48px);
+            font-size: mrem(16px);
+          }
+          .info {
+            strong {
+              font-size: mrem(18px);
+              line-height: mrem(24px);
+              padding-bottom: mrem(7px);
+            }
+            p {
+              font-size: mrem(14px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

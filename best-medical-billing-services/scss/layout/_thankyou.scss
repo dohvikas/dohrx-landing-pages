@@ -1,0 +1,93 @@
+// thank you Section
+.thankyou {
+  padding-top: rem(56px);
+  padding-bottom: rem(56px);
+  background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 50%, #e1f5fe 100%);
+  background-image: url("../images/Hero-background-desk.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(60px);
+    width: 100%;
+  }
+
+  &__title {
+    font-size: rem(72px);
+    line-height: 120%;
+    margin-bottom: rem(20px);
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+
+    .text-highlight {
+      background: linear-gradient(89.58deg, #2960ea 2.28%, #d3287c 97.37%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(24px);
+    color: #19191a;
+    margin-bottom: rem(40px);
+    line-height: 140%;
+    font-weight: 500;
+    max-width: rem(990px);
+  }
+
+  &__cta {
+    display: flex;
+    gap: rem(16px);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .thankyou {
+    padding-top: mrem(56px);
+    padding-bottom: mrem(45px);
+
+    &__container {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: mrem(20px);
+    }
+
+    &__title {
+      font-size: mrem(30px);
+      line-height: 130%;
+      margin-bottom: mrem(15px);
+      text-align: center;
+    }
+
+    &__subtitle {
+      font-size: mrem(14px);
+      margin-bottom: mrem(16px);
+      line-height: 150%;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    &__cta {
+      justify-content: center;
+    }
+  }
+}

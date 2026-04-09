@@ -1,0 +1,115 @@
+.practice-section {
+  background-color: #D1EEF880;
+   padding-top: rem(100px);
+  padding-bottom: rem(50px);
+
+  .section-header {
+    margin-bottom: rem(50px);
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    h2 {
+      font-size: rem(58px);
+      margin-bottom: rem(10px);
+      max-width: 960px;
+      margin-inline: auto;
+      .text-highlight{
+        font-weight: 700;
+      }
+    }
+    .desktop-image{
+        width: rem(1500px);
+        margin-bottom: rem(50px);
+        margin-top: rem(50px);
+    }
+    .mobile-image{
+        display: none;
+    }
+    .practice-pricing-box {
+        width: rem(1300px);
+    position: relative;
+
+    border-radius: rem(10px);
+    background-color: transparent;
+    padding: rem(12px) rem(24px);
+    margin-bottom: rem(30px);
+    font-weight: 600;
+    color: #19191a;
+    display: inline-block;
+    font-size: rem(24px);
+     border-bottom: 1px solid #d3287c;
+    border-top: 1px solid #2960ea;
+    border-right: 1px solid #d3287c ;
+    border-left: 1px solid #2960ea ;
+   
+  }
+  .mt-4{
+     padding-bottom: 0px;
+  }
+}
+
+}
+
+@media (max-width: 767px) {
+  .practice-section {
+    .container {
+      .zoom-decor {
+        display: none;
+      }
+    }
+    .section-header {
+      margin-bottom: mrem(20px);
+
+      h2 {
+        font-size: mrem(24px);
+        margin-bottom: mrem(16px);
+        max-width: mrem(400px);
+      }
+      .practice-pricing-box {
+        text-align: center;
+        width: rem(700px);
+        font-size: rem(12px);
+        margin-bottom: rem(10px);
+      }
+    
+    }
+
+  }
+}
+@media (max-width: 640px) {
+  .practice-section {
+       padding-top: rem(50px);
+  padding-bottom: rem(50px);
+    .container {
+      .zoom-decor {
+        display: none;
+      }
+    }
+    .section-header {
+      margin-bottom: mrem(20px);
+
+      h2 {
+        font-size: mrem(24px);
+        margin-bottom: mrem(16px);
+      }
+      .desktop-image{
+        display: none;
+      }
+      .mobile-image{
+        display: block;
+        width: rem(500px);
+         margin-bottom: rem(20px);
+        margin-top: rem(20px);
+      }
+      .practice-pricing-box {
+        text-align: center;
+        width: rem(400px);
+        font-size: rem(12px);
+      }
+    
+    }
+
+  }
+}
+

@@ -1,0 +1,37 @@
+// _________________________________PX to REM____________________________
+@function rem($px) {
+    $rem-size: 20px;
+    @return calc($px / $rem-size) * 1rem;
+    @return $px;
+}
+
+$font-size-base: 20px; // this value depend on perent div font size
+@function em($px, $context: $font-size-base) {
+    @return calc($px / $context) * 1em;
+}
+
+@function vw($target) {
+    $vw-context: (1000*.01) * 1px;
+    @return calc($target/$vw-context) * 1vw;
+}
+
+@function px-to-px($px) {
+    @return $px;
+}
+
+// Neel HROne VH and VW Function
+
+@function vwh($px) {
+    $vw-context: 1440px;
+    $vh-context: 800px;
+    $vw-ratio: calc($px / $vw-context) * 100vw;
+    $vh-ratio: calc($px / $vh-context) * 100vh;
+    @return calc(min($vw-ratio, $vh-ratio));
+}
+@function mrem($px) {
+    $vw-context: 370px;
+    $vh-context: 750px;
+    $vw-ratio: calc($px / $vw-context) * 100vw;
+    $vh-ratio: calc($px / $vh-context) * 100vh;
+    @return calc(min($vw-ratio, $vh-ratio));
+}

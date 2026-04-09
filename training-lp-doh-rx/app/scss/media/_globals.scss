@@ -1,0 +1,128 @@
+@include max(d-1680) {
+  html,
+  body {
+    $rem-size: 20px;
+    font-size: $rem-size;
+  }
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: rem(1206px);
+  }
+}
+
+@include max(d-1440) {
+  html,
+  body {
+    $rem-size: 19px;
+    font-size: $rem-size;
+  }
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: rem(1330px);
+  }
+}
+
+@include max(d-1366) {
+  html,
+  body {
+    $rem-size: 18px;
+    font-size: $rem-size;
+  }
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: rem(1340px);
+  }
+}
+
+@include max(d-1280) {
+  html,
+  body {
+    $rem-size: 18px;
+    font-size: $rem-size;
+  }
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: rem(1260px);
+  }
+}
+@include max(d-1024) {
+    html,
+    body {
+        $rem-size: 18px;
+        font-size: $rem-size;
+    }
+      .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: rem(1000px);
+  }
+}
+@include max(d-991) {
+    html,
+    body {
+        $rem-size: 16px;
+        font-size: $rem-size;
+    }
+          .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: rem(1140px);
+  }
+}
+
+@include max(d-768) {
+    html,
+    body {
+        $rem-size: 14px;
+        font-size: $rem-size;
+    }
+          .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: rem(994px);
+  }
+}
+
+@include max(d-600) {
+    // .container{
+    //     padding-inline: 22px;
+    // }
+    html,
+    body {
+        $rem-size: 14px;
+        font-size: $rem-size;
+    }
+              .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: rem(700px);
+  }
+}

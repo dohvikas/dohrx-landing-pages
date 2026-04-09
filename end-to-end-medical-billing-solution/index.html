@@ -1,0 +1,1746 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AI-Powered Medical Billing & EOB Audits | Boost Revenue with DohRx
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://go.dohrx.com/end-to-end-medical-billing-solution/"
+    />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KJSZ5FSV");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PL1MD71REM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PL1MD71REM");
+    </script>
+
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "v27olng6hq");
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Debug tracking (remove after fixing) -->
+    <script src="debug-tracking.js"></script>
+
+    <!-- Improved tracking -->
+    <script src="improved-tracking.js"></script>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KJSZ5FSV"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="header" id="head-lp6">
+      <div class="container">
+        <a href="#" class="header__logo">
+          <img src="images/logo.png" alt="DohRx Logo" />
+        </a>
+        <a
+          href="javascript:void(0)"
+          class="btn btn--primary js-open-contact-modal"
+          onclick="dataLayer.push({ event: 'AM_Get_Started_Brett' })"
+        >
+          Get Started</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-sect-lp6">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="text-highlight">Stop Revenue Leaks Before</span> They
+            Drain Your Practice
+          </h1>
+          <p class="hero__subtitle">
+            AI-powered, done-for-you medical billing workflows that strengthen
+            your internal team, increase billing accuracy, and eliminate
+            underpayments before they happen.<br /><strong
+              >Includes built-in EOB audit, insurance verification, and flexible
+              delivery models - from full-service to hybrid.</strong
+            >
+          </p>
+          <div class="hero_pricing-wrapper">
+            <div class="hero__pricing-box">
+              Flexible Pricing Models: Flat monthly fee. You keep 100% of any
+              recovered amounts.
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="hero__form-wrapper">
+          <div class="lead-form">
+            <h3>
+              Free 30-Minute Practice Operations<br />
+              Review (30 mins | One-On-One)
+              <!-- <span class="form-subtext">Review (15 mins | One on One)</span> -->
+            </h3>
+            <form class="contact-us">
+              <div class="form-group">
+                <label for="first_name">First Name *</label>
+                <input
+                  type="text"
+                  id="first_name"
+                  class="first_name"
+                  name="first_name"
+                  placeholder="Dr. John"
+                />
+                <span class="error-msg" id="first-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="last_name">Last Name *</label>
+                <input
+                  type="text"
+                  id="last_name"
+                  class="last_name"
+                  name="last_name"
+                  placeholder="Smith"
+                />
+                <span class="error-msg" id="last-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Work Email *</label>
+
+                <input
+                  type="email"
+                  id="email"
+                  class="email"
+                  placeholder="@gmail.com"
+                  name="email"
+                />
+                <span class="error-msg" id="email-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Contact Number *</label>
+                <input
+                  type="tel"
+                  maxlength="10"
+                  id="phone"
+                  class="phone"
+                  name="phone"
+                  placeholder="(555) 123-4567"
+                />
+                <span class="error-msg" id="phone-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="date">Date selection *</label>
+                <input
+                  type="text"
+                  id="date"
+                  class="date"
+                  name="date_selection"
+                  autocomplete="off"
+                  placeholder="mm/dd/yyyy"
+                />
+                <span class="error-msg" id="date-error"></span>
+              </div>
+
+              <!-- UTM and Campaign Fields -->
+              <input
+                id="utm_campaign"
+                class="utm_campaign"
+                name="utm_campaign"
+                type="hidden"
+              />
+              <input
+                id="utm_content"
+                class="utm_content"
+                name="utm_content"
+                type="hidden"
+              />
+              <input
+                id="lead_source"
+                class="lead_source"
+                name="lead_source"
+                value="Website"
+                type="hidden"
+              />
+              <input
+                id="utm_medium"
+                class="utm_medium"
+                name="utm_medium"
+                type="hidden"
+              />
+
+              <input
+                id="utm_source"
+                class="utm_source"
+                name="utm_source"
+                type="hidden"
+              />
+
+              <input
+                id="utm_term"
+                class="utm_term"
+                name="utm_term"
+                type="hidden"
+              />
+
+              <input
+                id="page_url"
+                class="page_url"
+                name="page_url"
+                type="hidden"
+              />
+              <button type="submit" class="btn btn--primary btn-submit">
+                Claim Your Lost Revenue, Risk-Free
+              </button>
+
+              <div
+                id="success-message"
+                style="
+                  display: none;
+                  color: #28a745;
+                  margin-top: 10px;
+                  font-weight: 500;
+                "
+              >
+                Thank you! We will contact you soon.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section problem-section" id="prob-sect-lp6">
+      <img src="./images/vector-section.png" alt="decor" class="zoom-decor" />
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>
+            <span class="text-highlight">Billing May Look Fine,</span
+            ><br />Until You Look Closer
+          </h2>
+          <p>
+            Even when billing looks handled, most practices still lose revenue
+            after the claim is paid. Unposted EOB Payments, EFTs, ageing claims,
+            missing follow-ups, and overlooked denials quietly drain thousands
+            every month. Common challenges we see:
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img
+                src="./images/Claims being processed-but-not-fully-posted.svg"
+                alt="Claims processed"
+                class="icon-img"
+              />
+            </div>
+            <p>Claims being processed but not fully posted</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img
+                src="./images/Underpayments-going-unnoticed.svg"
+                alt="Underpayments"
+                class="icon-img"
+              />
+            </div>
+            <p>Underpayments going unnoticed</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img
+                src="./images/Denials-piling-up-without-timely-action.svg"
+                alt="Denials"
+                class="icon-img"
+              />
+            </div>
+            <p>Denials piling up without timely action</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img
+                src="./images/Front-desk-overload-causing-eligibility-errors.svg"
+                alt="Front desk overload"
+                class="icon-img"
+              />
+            </div>
+            <p>Front-desk overload causing eligibility errors</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img
+                src="./images/Postin-gaps-creating-AR-blind-spots.svg"
+                alt="Partial payments"
+                class="icon-img"
+              />
+            </div>
+            <p>Posting gaps creating A/R blind spots</p>
+          </div>
+        </div>
+        <div class="features-subtext">
+          These aren’t just billing issues; they’re
+          <span class="text-highlight">revenue leaks.</span>
+        </div>
+        <div class="text-center">
+          <a
+            href="javascript:void(0)"
+            class="btn btn--primary js-open-contact-modal"
+            onclick="dataLayer.push({ event: 'AM_Get_In_Touch_With_Us' })"
+          >
+            Claim Your Lost Revenue
+          </a>
+        </div>
+      </div>
+
+      <!-- POPUP section -->
+      <div id="pop-up-contact" class="modal-overlay">
+        <div class="modal-content">
+          <button type="button" class="modal-close">&times;</button>
+          <div class="hero__form-wrapper popup-form">
+            <div class="lead-form">
+              <h3>
+                Free 30-Minute Practice Operations Review (30 mins | One-On-One)
+              </h3>
+              <form class="contact-us">
+                <div class="form-group">
+                  <label for="first_name">First Name *</label>
+                  <input
+                    type="text"
+                    id="first_name"
+                    class="first_name"
+                    name="first_name"
+                    placeholder="Dr. John"
+                  />
+                  <span class="error-msg" id="first-name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="last_name">Last Name *</label>
+                  <input
+                    type="text"
+                    id="last_name"
+                    class="last_name"
+                    name="last_name"
+                    placeholder="Smith"
+                  />
+                  <span class="error-msg" id="last-name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Work Email *</label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    class="email"
+                    placeholder="@gmail.com"
+                    name="email"
+                  />
+                  <span class="error-msg" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Contact Number *</label>
+                  <input
+                    type="tel"
+                    maxlength="10"
+                    id="phone"
+                    class="phone"
+                    name="phone"
+                    placeholder="(555) 123-4567"
+                  />
+                  <span class="error-msg" id="phone-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="date">Date selection *</label>
+                  <input
+                    type="text"
+                    id="date"
+                    class="date"
+                    name="date_selection"
+                    autocomplete="off"
+                    placeholder="mm/dd/yyyy"
+                  />
+                  <span class="error-msg" id="date-error"></span>
+                </div>
+
+                <!-- UTM and Campaign Fields -->
+                <input
+                  id="utm_campaign"
+                  class="utm_campaign"
+                  name="utm_campaign"
+                  type="hidden"
+                />
+                <input
+                  id="utm_content"
+                  class="utm_content"
+                  name="utm_content"
+                  type="hidden"
+                />
+                <input
+                  id="lead_source"
+                  class="lead_source"
+                  name="lead_source"
+                  value="Website"
+                  type="hidden"
+                />
+                <input
+                  id="utm_medium"
+                  class="utm_medium"
+                  name="utm_medium"
+                  type="hidden"
+                />
+
+                <input
+                  id="utm_source"
+                  class="utm_source"
+                  name="utm_source"
+                  type="hidden"
+                />
+
+                <input
+                  id="utm_term"
+                  class="utm_term"
+                  name="utm_term"
+                  type="hidden"
+                />
+
+                <input
+                  id="page_url"
+                  class="page_url"
+                  name="page_url"
+                  type="hidden"
+                />
+                <button type="submit" class="btn btn--primary btn-submit">
+                  Sumbit
+                </button>
+                <div
+                  id="success-message"
+                  style="
+                    display: none;
+                    color: #28a745;
+                    margin-top: 10px;
+                    font-weight: 500;
+                  "
+                >
+                  Thank you! We will contact you soon.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section solution-section" id="sol-sect-lp6">
+      <div class="container solution__container">
+        <div class="solution__image desktop-section">
+          <img
+            src="./images/Insurance.png"
+            alt="Medical Billing"
+            class="Desktop-image"
+          />
+          <img
+            src="./images/Insurance-mb.png"
+            alt="Medical Billing"
+            class="Mobile-image"
+          />
+          <img
+            src="./images/vector-medical.png"
+            alt="Vector"
+            class="vector-icon"
+          />
+          <div class="solution__image-text">
+            Everything is handled for you, no additional hiring, no training, no
+            complexity. Our workflows are built to support practices of all
+            sizes, and we accept new practices from any state, any specialty.
+          </div>
+        </div>
+        <div class="solution__content">
+          <h2>
+            Your <span class="text-highlight">Done-For-You</span><br />Medical
+            Billing Program
+          </h2>
+          <p>
+            DohRx provides expert-led, AI-assisted billing workflows that plug
+            revenue leaks, reduce staff overload, and strengthen your internal
+            billing process. Use our hybrid model to retain your team or let us
+            handle everything for you. Either way - we stop leaks, boost claim
+            accuracy, and protect your bottom line.
+          </p>
+          <p class="subtext-solution">How we help reduce losses:</p>
+
+          <div class="solution__image mobile-section">
+            <img
+              src="./images/Insurance.png"
+              alt="Medical Billing"
+              class="Desktop-image"
+            />
+            <img
+              src="./images/Insurance-mb.png"
+              alt="Medical Billing"
+              class="Mobile-image"
+            />
+            <img
+              src="./images/vector-medical.png"
+              alt="Vector"
+              class="vector-icon"
+            />
+            <div class="solution__image-text">
+              Everything is handled for you, no additional hiring, no training,
+              no complexity. Our workflows are built to support practices of all
+              sizes, and we accept new practices from any state, any specialty.
+            </div>
+          </div>
+
+          <ul class="check-list desktop">
+            <div class="Line-middle"></div>
+            <li>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="10" height="10" fill="#01A1DE" />
+              </svg>
+              <div>
+                <span> AI-assisted EOB checks </span>to surface missed payments
+                -
+                <b>our core offering</b>
+              </div>
+            </li>
+            <div class="Line-middle"></div>
+            <li>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="10" height="10" fill="#01A1DE" />
+              </svg>
+              <div>
+                <span>Comprehensive claim reviews</span> (not just random
+                samples)
+              </div>
+            </li>
+            <div class="Line-middle"></div>
+            <li>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="10" height="10" fill="#01A1DE" />
+              </svg>
+              <div>
+                <span>Insurance verification</span> for clean eligibility and
+                fewer rejections
+              </div>
+            </li>
+            <div class="Line-middle"></div>
+            <li>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="10" height="10" fill="#01A1DE" />
+              </svg>
+              <div>
+                <span>Accurate medical coding workflows</span> supported by
+                certified billers
+              </div>
+            </li>
+            <div class="Line-middle"></div>
+            <li>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="10" height="10" fill="#01A1DE" />
+              </svg>
+              <div>
+                <span>Payment posting + reconciliation</span> designed to reduce
+                missed revenue
+              </div>
+            </li>
+            <div class="Line-middle"></div>
+            <li>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="10" height="10" fill="#01A1DE" />
+              </svg>
+              <div>
+                <span>Denial tracking & rework</span> queues for timely
+                follow-up
+              </div>
+            </li>
+          </ul>
+          <div class="text-left mt-4">
+            <a
+              href="javascript:void(0)"
+              class="btn btn--primary js-open-contact-modal"
+              onclick="dataLayer.push({ event: 'AM_Get_In_Touch_With_Us' })"
+            >
+              Recover Lost Revenue Today
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section" id="stat-sect-lp6">
+      <div class="container">
+        <img src="./images/vector-section.png" alt="decor" class="zoom-decor" />
+        <img
+          src="./images/vector-medical.png"
+          alt="Vector"
+          class="vector-icon"
+        />
+        <div class="section-header text-center">
+          <h2>
+            <span class="text-highlight">Trusted by Practices <br /> </span
+            >Across the U.S.
+          </h2>
+          <p>What our operational scale looks like:</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card bg-blue">
+            <h3>$750K+</h3>
+            <p>in daily reconciliation across supported small businesses.</p>
+            <img
+              src="./images/card-icon-element.svg"
+              height="90"
+              width="90"
+              alt="Card elemnet"
+            />
+          </div>
+          <div class="stat-card bg-cyan">
+            <h3>48-72 hour</h3>
+            <p>processing windows.</p>
+            <img
+              src="./images/card-icon-element.svg"
+              height="90"
+              width="90"
+              alt="Card elemnet"
+            />
+          </div>
+          <div class="stat-card bg-right">
+            <h3>800+</h3>
+            <p>practice workflows supported.</p>
+            <img
+              src="./images/card-icon-element.svg"
+              height="90"
+              width="90"
+              alt="Card elemnet"
+            />
+          </div>
+          <div class="stat-card bg-cyan">
+            <h3>Clear weekly</h3>
+            <p>
+              performance dashboards for complete visibility and team meetings.
+            </p>
+            <img
+              src="./images/card-icon-element.svg"
+              height="90"
+              width="90"
+              alt="Card elemnet"
+            />
+          </div>
+          <div class="stat-card bg-cyan">
+            <h3>Dedicated</h3>
+            <p>team & supervisor assigned for weekly review meetings.</p>
+            <img
+              src="./images/card-icon-element.svg"
+              height="90"
+              width="90"
+              alt="Card elemnet"
+            />
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a
+            href="javascript:void(0)"
+            class="btn btn--primary js-open-zoho-popup2"
+            id="GSBM_LP1_trusted_practices_cta"
+            onclick="dataLayer.push({ event: 'AM_Get_Started_Brett' })"
+          >
+            Get Started with Brett McCarthy, MBA
+          </a>
+        </div>
+        <div id="zohoBookingPopup" class="popup-overlay">
+          <div class="popup-content popup-content--iframe">
+            <button type="button" class="popup-close" aria-label="Close">
+              &times;
+            </button>
+
+            <iframe
+              src="https://dohrx.zohobookings.com/portal-embed#/4731337000000049254"
+              width="100%"
+              height="750"
+              frameborder="0"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-list-section" id="fea-sect-lp6">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>
+            What You Get With<br /><span class="text-highlight"
+              >DohRx Billing</span
+            >
+          </h2>
+          <p>
+            Built-in EOB audit, insurance verification, and denial management
+            included in all models.
+          </p>
+        </div>
+        <div class="features-grid-large">
+          <div class="feature-item">
+            <div class="icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M42.9727 53.0039V54.4922C42.9727 56.1562 41.6133 57.5156 39.9492 57.5156H6.50391C4.83984 57.5156 3.48047 56.1562 3.48047 54.4922V5.92969C3.48047 4.26562 4.83984 2.90625 6.50391 2.90625H39.9492C41.6133 2.90625 42.9727 4.26562 42.9727 5.92969V24.3398C46.0898 24.375 49.1836 24.5859 52.2656 24.9727C52.6289 25.0195 52.9102 25.2656 53.0273 25.582C53.2617 26.25 53.6133 27 53.9766 27.6094C54.6914 28.8516 55.6289 29.9766 56.6953 30.8906C56.9414 31.1016 57.0469 31.418 57.0117 31.7109C55.9453 40.6758 50.6953 48.5273 42.9727 53.0039ZM37.7227 36.8555C37.3828 36.4688 37.4297 35.8711 37.8281 35.5313C38.2266 35.1914 38.8125 35.2383 39.1523 35.6367L40.9102 37.6758L44.6484 33.3984C44.9883 33.0117 45.5742 32.9648 45.9727 33.3047C46.3594 33.6445 46.4062 34.2305 46.0664 34.6289L41.5195 39.8086C41.1328 40.1484 40.5352 40.1016 40.1953 39.7031L37.7227 36.8555ZM42.0352 28.3242C46.6875 28.3242 50.4727 32.0977 50.4727 36.7617C50.4727 41.4258 46.6875 45.1992 42.0352 45.1992C37.3711 45.1992 33.5977 41.4258 33.5977 36.7617C33.5977 32.0977 37.3828 28.3242 42.0352 28.3242ZM46.6758 32.1211C44.1094 29.5547 39.9609 29.5547 37.3945 32.1211C34.8281 34.6875 34.8281 38.8359 37.3945 41.4023C39.9609 43.9688 44.1094 43.9688 46.6758 41.4023C49.2422 38.8477 49.2422 34.6875 46.6758 32.1211ZM8.34375 20.0625C7.82812 20.0625 7.40625 19.6406 7.40625 19.125C7.40625 18.6094 7.82812 18.1875 8.34375 18.1875H38.0977C38.6133 18.1875 39.0352 18.6094 39.0352 19.125C39.0352 19.6406 38.6133 20.0625 38.0977 20.0625H8.34375ZM11.9883 13.8516C11.9883 13.3359 12.4102 12.9141 12.9258 12.9141C13.4414 12.9141 13.8633 13.3359 13.8633 13.8516V14.168C13.8633 15.4453 12.832 16.4766 11.5547 16.4766H10.3945C9.11719 16.4766 8.08594 15.4453 8.08594 14.168V9.44531C8.08594 8.17969 9.11719 7.14844 10.3945 7.14844H11.5547C12.832 7.14844 13.8633 8.17969 13.8633 9.45703V9.77344C13.8633 10.2891 13.4414 10.7109 12.9258 10.7109C12.4102 10.7109 11.9883 10.2891 11.9883 9.77344C11.9883 9.51563 12.0234 9.31641 11.8594 9.15234C11.7773 9.07031 11.6719 9.02344 11.5547 9.02344H10.3945C10.1602 9.02344 9.96094 9.22266 9.96094 9.45703V14.1797C9.96094 14.4141 10.1602 14.6133 10.3945 14.6133H11.5547C11.7891 14.6133 11.9883 14.4141 11.9883 14.1797V13.8516ZM29.4023 15.5391C29.4023 16.0547 28.9805 16.4766 28.4648 16.4766C27.9492 16.4766 27.5273 16.0547 27.5273 15.5391V8.08594C27.5273 7.57031 27.9492 7.14844 28.4648 7.14844C28.9805 7.14844 29.4023 7.57031 29.4023 8.08594V15.5391ZM32.7656 15.5391C32.7656 16.0547 32.3438 16.4766 31.8281 16.4766C31.3125 16.4766 30.8906 16.0547 30.8906 15.5391V8.08594C30.8906 7.11328 32.25 6.73828 32.6953 7.73438L34.6172 11.4961L36.5859 7.65234C37.0312 6.78516 38.3555 7.10156 38.3555 8.07422V15.5273C38.3555 16.043 37.9336 16.4648 37.418 16.4648C36.9023 16.4648 36.4805 16.043 36.4805 15.5273V11.9531L35.4492 13.9687C35.1094 14.6367 34.1367 14.6484 33.7852 13.9687L32.7539 11.9531V15.5391H32.7656ZM22.125 15.5391C22.125 16.0547 21.7031 16.4766 21.1875 16.4766C20.6719 16.4766 20.25 16.0547 20.25 15.5391V9.64453C20.25 8.26172 21.375 7.13672 22.7578 7.13672H23.5312C24.9141 7.13672 26.0391 8.26172 26.0391 9.64453V15.5391C26.0391 16.0547 25.6172 16.4766 25.1016 16.4766C24.5859 16.4766 24.1641 16.0547 24.1641 15.5391V14.4609H22.1367V15.5391H22.125ZM22.125 9.64453V12.5742H24.1523V9.64453C24.1523 9.30469 23.8711 9.01172 23.5195 9.01172H22.7461C22.4063 9.02344 22.125 9.30469 22.125 9.64453ZM18.4922 14.6016C19.0078 14.6016 19.4297 15.0234 19.4297 15.5391C19.4297 16.0547 19.0078 16.4766 18.4922 16.4766H15.8203C15.3047 16.4766 14.8828 16.0547 14.8828 15.5391V8.08594C14.8828 7.57031 15.3047 7.14844 15.8203 7.14844C16.3359 7.14844 16.7578 7.57031 16.7578 8.08594V14.6016H18.4922ZM8.34375 25.875C7.82812 25.875 7.40625 25.4531 7.40625 24.9375C7.40625 24.4219 7.82812 24 8.34375 24H27.1406C27.6563 24 28.0781 24.4219 28.0781 24.9375C28.0781 25.4531 27.6563 25.875 27.1406 25.875H8.34375ZM8.34375 34.0195C7.82812 34.0195 7.40625 33.5977 7.40625 33.082C7.40625 32.5664 7.82812 32.1445 8.34375 32.1445H20.4492C20.9648 32.1445 21.3867 32.5664 21.3867 33.082C21.3867 33.5977 20.9648 34.0195 20.4492 34.0195H8.34375ZM8.34375 29.9531C7.82812 29.9531 7.40625 29.5312 7.40625 29.0156C7.40625 28.5 7.82812 28.0781 8.34375 28.0781H22.957C23.4727 28.0781 23.8945 28.5 23.8945 29.0156C23.8945 29.5312 23.4727 29.9531 22.957 29.9531H8.34375ZM14.7773 38.6016C12.4805 38.6016 11.3203 41.3906 12.9492 43.0195C14.5781 44.6484 17.3672 43.4883 17.3672 41.1914C17.3672 39.7617 16.207 38.6016 14.7773 38.6016ZM11.625 38.0391C13.3711 36.293 16.1953 36.293 17.9414 38.0391C19.4648 39.5625 19.6875 41.9648 18.457 43.7344C20.1797 44.7188 21.1875 46.7344 21.1875 48.7852V50.8711C21.1875 51.3867 20.7656 51.8086 20.25 51.8086H9.32812C8.8125 51.8086 8.39062 51.3867 8.39062 50.8711V48.7852C8.39062 46.7227 9.38672 44.707 11.1211 43.7344C9.87891 41.9648 10.1016 39.5625 11.625 38.0391ZM16.9219 45.1055C14.6719 46.3359 12.6914 45.1055 12.6445 45.1055C12.0352 45.2695 11.4961 45.668 11.0742 46.2188C10.5703 46.8984 10.2656 47.7891 10.2656 48.7852V49.9336H19.3125V48.7852C19.3008 47.1797 18.4219 45.5039 16.9219 45.1055ZM41.0977 24.3516V5.92969C41.0977 5.29688 40.582 4.78125 39.9492 4.78125H6.50391C5.87109 4.78125 5.35547 5.29688 5.35547 5.92969V54.4922C5.35547 55.125 5.88281 55.6406 6.50391 55.6406H39.9492C40.582 55.6406 41.0977 55.125 41.0977 54.4922V53.0039C33.3867 48.5391 28.125 40.6758 27.0586 31.7227C27.0234 31.3828 27.1641 31.0664 27.4219 30.8672C27.9375 30.4219 28.418 29.918 28.875 29.3789C29.8008 28.2656 30.5508 26.9648 31.043 25.5937C31.1719 25.2305 31.5 25.0078 31.8516 24.9844C33.5156 24.7734 35.1914 24.6211 36.8789 24.5039C38.2852 24.4102 39.6914 24.3633 41.0977 24.3516ZM33.2578 43.1836C35.5195 46.5469 38.5312 49.3594 42.0352 51.3867C49.0898 47.2852 53.9648 40.1484 55.0898 31.9805C54.0117 30.9844 53.0977 29.8477 52.3477 28.5586C52.0312 28.0195 51.7031 27.3398 51.4688 26.7656C45.2812 26.0273 38.7656 26.0273 32.5781 26.7656C31.7812 28.7344 30.5273 30.5391 28.9688 31.9805C29.543 36.082 31.043 39.8906 33.2578 43.1836Z"
+                  fill="#01A1DE"
+                />
+              </svg>
+            </div>
+            <h4>Comprehensive Claim Auditing</h4>
+            <p>
+              Designed to surface posting gaps, underpayments, and missing
+              responses.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M58.3081 29.871C59.6952 27.1269 59.1208 23.8697 56.8789 21.7655L53.625 18.7113C52.8744 18.007 52.4156 17.2121 52.1808 16.2097L51.1627 11.8649C50.4616 8.87121 47.9278 6.74508 44.8577 6.57434L40.4021 6.32648C39.3743 6.2693 38.5118 5.95535 37.6877 5.33859L34.1151 2.66437C31.654 0.821953 28.3461 0.821719 25.8846 2.66437L22.312 5.33848C21.4879 5.95535 20.6253 6.2693 19.5976 6.32648L15.142 6.57434C12.072 6.74508 9.53821 8.87121 8.83696 11.8649L7.81895 16.2098C7.58423 17.2121 7.12532 18.007 6.37485 18.7114L3.12079 21.7655C0.878876 23.8696 0.30454 27.1269 1.69157 29.871L3.70485 33.8536C4.16927 34.7723 4.32864 35.6762 4.20642 36.6983L3.67673 41.1294C3.31192 44.1823 4.96567 47.0467 7.792 48.2572L11.8943 50.0141C12.8404 50.4193 13.5436 51.0093 14.1071 51.8707L16.5497 55.6056C18.2324 58.1788 21.3404 59.3101 24.2838 58.4205L28.5555 57.1296C29.5409 56.8317 30.4588 56.8318 31.444 57.1296L35.7157 58.4205C36.3854 58.6229 37.0633 58.7208 37.7313 58.7207C39.9992 58.7205 42.15 57.5933 43.4498 55.6056L45.8925 51.8707C46.4559 51.0093 47.159 50.4192 48.1052 50.014L52.2075 48.2571C55.0338 47.0466 56.6877 44.1821 56.3227 41.1293L55.7931 36.6981C55.6708 35.6761 55.8302 34.7721 56.2946 33.8535L58.3081 29.871ZM54.6215 33.0079C53.9914 34.2544 53.7657 35.5343 53.9315 36.9209L54.4612 41.352C54.7306 43.6061 53.5563 45.64 51.4695 46.5338L47.3673 48.2906C46.0835 48.8405 45.0879 49.6759 44.3234 50.8446L41.8808 54.5795C40.6384 56.4793 38.4311 57.2825 36.2582 56.6258L31.9865 55.3349C31.3181 55.1329 30.6591 55.0318 29.9999 55.0318C29.3408 55.0318 28.6815 55.1329 28.0132 55.3349L23.7415 56.6258C21.5686 57.2824 19.3615 56.4793 18.1189 54.5795L15.6764 50.8446C14.9118 49.6758 13.9161 48.8404 12.6324 48.2906L8.53017 46.5338C6.44329 45.6401 5.26907 43.6061 5.53849 41.352L6.06817 36.9209C6.23399 35.5342 6.00829 34.2543 5.37817 33.0077L3.36489 29.0251C2.34091 26.9991 2.7486 24.6863 4.40388 23.1326L7.65794 20.0786C8.67618 19.1229 9.32599 17.9973 9.6445 16.6375L10.6625 12.2925C11.1802 10.0822 12.9794 8.5725 15.2461 8.44652L19.7017 8.19867C21.0961 8.12109 22.3174 7.67648 23.4355 6.83965L27.0081 4.16543C28.8254 2.80512 31.1742 2.805 32.9915 4.16543L36.5641 6.83965C37.6822 7.67648 38.9036 8.12109 40.2979 8.19867L44.7535 8.44652C47.0203 8.57262 48.8193 10.0822 49.3371 12.2926L50.3551 16.6375C50.6736 17.9974 51.3235 19.123 52.3418 20.0786L55.5957 23.1326C57.251 24.6861 57.6587 26.9991 56.6347 29.0251L54.6215 33.0079ZM30 10.8346C19.432 10.8346 10.8344 19.4321 10.8344 30.0001C10.8344 40.5681 19.432 49.1657 30 49.1657C40.5679 49.1657 49.1655 40.5681 49.1655 30.0001C49.1655 19.4321 40.5679 10.8346 30 10.8346ZM30 47.2907C20.4659 47.2907 12.7094 39.5341 12.7094 30.0001C12.7094 20.4661 20.4659 12.7096 30 12.7096C39.534 12.7096 47.2905 20.4661 47.2905 30.0001C47.2905 39.5341 39.534 47.2907 30 47.2907ZM37.9796 21.313C37.975 21.313 37.9702 21.313 37.9657 21.313C37.0289 21.3166 36.1503 21.6848 35.4921 22.3499L27.7177 30.2016L24.507 26.9907C23.844 26.3277 22.9623 25.9625 22.0243 25.9625C21.0862 25.9625 20.2046 26.3277 19.5415 26.9909C18.1726 28.3598 18.1726 30.5873 19.5415 31.9562L25.2439 37.6587C25.9284 38.343 26.8275 38.6854 27.7267 38.6854C28.6258 38.6854 29.525 38.3432 30.2095 37.6587C32.3715 35.4966 34.5529 33.2838 36.6627 31.1441C37.9303 29.8582 39.1981 28.5724 40.4689 27.2897C41.8285 25.9177 41.8214 23.6944 40.453 22.3336C39.791 21.675 38.9131 21.313 37.9796 21.313ZM39.1371 25.9698C37.8651 27.2537 36.5962 28.5407 35.3273 29.8276C33.22 31.9651 31.0409 34.1754 28.8836 36.3327C28.2457 36.9707 27.2075 36.9707 26.5698 36.3327L20.8674 30.6302C20.2296 29.9924 20.2296 28.9543 20.8674 28.3164C21.1763 28.0075 21.5872 27.8373 22.0243 27.8373C22.4613 27.8373 22.8723 28.0075 23.1812 28.3164L27.0581 32.1934C27.234 32.3692 27.4724 32.468 27.721 32.468H27.7234C27.9729 32.4674 28.2118 32.3673 28.3872 32.1901L36.8245 23.6688C37.1299 23.3603 37.5378 23.1894 37.9729 23.1878H37.9795C38.4142 23.1878 38.8228 23.3563 39.131 23.6627C39.7674 24.296 39.7702 25.3308 39.1371 25.9698Z"
+                  fill="#01A1DE"
+                />
+              </svg>
+            </div>
+            <h4>Certified Medical Billing Specialists</h4>
+            <p>
+              Experts in healthcare billing, eye-care billing, and
+              payer-specific workflows.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M52.5 32.7188V30.8438C53.0175 30.8438 53.4375 30.4241 53.4375 29.9063V24.2813C53.4375 23.7634 53.0175 23.3438 52.5 23.3438H47.4375L47.2559 22.6395C46.8413 21.0289 46.1975 19.4861 45.3431 18.059L44.9681 17.4316L48.5625 13.8311C48.9243 13.4685 48.9243 12.8811 48.5625 12.5186L44.5811 8.53125C44.2134 8.18079 43.6359 8.18079 43.2682 8.53125L39.6672 12.1322L39.0403 11.7572C37.611 10.9025 36.0667 10.2587 34.4539 9.84375L33.75 9.66065V4.59375C33.75 4.07593 33.3303 3.65625 32.8125 3.65625H27.1875C26.6697 3.65625 26.25 4.07593 26.25 4.59375V9.65625L25.5458 9.83826C23.9352 10.2524 22.3923 10.8962 20.9645 11.7495L20.3372 12.1249L16.7373 8.53125C16.3693 8.17786 15.7881 8.17786 15.42 8.53125L11.4375 12.5127C11.2625 12.6874 11.1639 12.9247 11.1639 13.1719C11.1639 13.4194 11.2625 13.6564 11.4375 13.8311L15.0385 17.4316L14.6635 18.059C13.8095 19.4861 13.1653 21.0289 12.7511 22.6395L12.5673 23.3438H7.5C6.98218 23.3438 6.5625 23.7634 6.5625 24.2813V29.9063C6.5625 30.4241 6.98218 30.8438 7.5 30.8438V32.7188C5.9469 32.7188 4.6875 31.4594 4.6875 29.9063V24.2813C4.6875 22.7282 5.9469 21.4688 7.5 21.4688H11.1273C11.514 20.1724 12.037 18.9207 12.6874 17.7349L10.1093 15.1567C9.58191 14.6305 9.28565 13.9164 9.28565 13.1719C9.28565 12.4274 9.58191 11.7133 10.1093 11.1874L14.0936 7.203C15.2036 6.14063 16.9537 6.14063 18.0637 7.203L20.6411 9.78003C21.8269 9.13001 23.079 8.60816 24.375 8.2218V4.59375C24.375 3.04065 25.6344 1.78125 27.1875 1.78125H32.8125C34.3656 1.78125 35.625 3.04065 35.625 4.59375V8.2218C36.9214 8.60816 38.1727 9.1311 39.3589 9.78113L41.937 7.203C43.0474 6.14063 44.7971 6.14063 45.9075 7.203L49.8911 11.1863C50.4181 11.7125 50.714 12.4259 50.714 13.1708C50.714 13.9157 50.4181 14.6298 49.8911 15.1556L47.313 17.7338C47.963 18.9203 48.4856 20.1724 48.8727 21.4688H52.5C54.0531 21.4688 55.3125 22.7282 55.3125 24.2813V29.9063C55.3125 31.4594 54.0531 32.7188 52.5 32.7188Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M43.125 27.0938H41.25C41.25 20.8806 36.2131 15.8438 30 15.8438C23.7869 15.8438 18.75 20.8806 18.75 27.0938H16.875C16.875 19.845 22.7512 13.9688 30 13.9688C37.2484 13.9688 43.125 19.845 43.125 27.0938Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M30 34.5938C26.8934 34.5938 24.375 32.075 24.375 28.9688C24.375 25.8622 26.8934 23.3438 30 23.3438C33.1069 23.3438 35.625 25.8622 35.625 28.9688C35.6217 32.0742 33.1055 34.5905 30 34.5938ZM30 25.2188C27.9291 25.2188 26.25 26.8978 26.25 28.9688C26.25 31.0397 27.9291 32.7188 30 32.7188C32.0709 32.7188 33.75 31.0397 33.75 28.9688C33.75 26.8978 32.0709 25.2188 30 25.2188Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M45.9375 38.3438C42.8309 38.3438 40.3125 35.825 40.3125 32.7188C40.3125 29.6122 42.8309 27.0938 45.9375 27.0938C49.0441 27.0938 51.5625 29.6122 51.5625 32.7188C51.5592 35.8242 49.043 38.3405 45.9375 38.3438ZM45.9375 28.9688C43.8666 28.9688 42.1875 30.6478 42.1875 32.7188C42.1875 34.7897 43.8666 36.4688 45.9375 36.4688C48.0084 36.4688 49.6875 34.7897 49.6875 32.7188C49.6875 30.6478 48.0084 28.9688 45.9375 28.9688Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M14.0625 38.3438C10.9559 38.3438 8.4375 35.825 8.4375 32.7188C8.4375 29.6122 10.9559 27.0938 14.0625 27.0938C17.1694 27.0938 19.6875 29.6122 19.6875 32.7188C19.6842 35.8242 17.168 38.3405 14.0625 38.3438ZM14.0625 28.9688C11.9916 28.9688 10.3125 30.6478 10.3125 32.7188C10.3125 34.7897 11.9916 36.4688 14.0625 36.4688C16.1334 36.4688 17.8125 34.7897 17.8125 32.7188C17.8125 30.6478 16.1334 28.9688 14.0625 28.9688Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M54.4365 40.7491C53.0394 39.7889 51.3831 39.2765 49.6875 39.2813H42.1875C41.7316 39.2853 41.2764 39.3267 40.827 39.4047C40.2272 38.4665 39.4468 37.6572 38.5313 37.0225C38.3939 36.9189 38.2496 36.8248 38.0991 36.7416C36.7877 35.9473 35.283 35.5291 33.75 35.5313H26.25C23.3829 35.521 20.7114 36.9841 19.1755 39.4047C18.7251 39.3267 18.2692 39.2853 17.8125 39.2813H10.3125C8.61841 39.2765 6.9624 39.7881 5.56604 40.7472C3.25818 42.3176 1.87646 44.9275 1.875 47.7188V51.4688C1.8783 54.0286 3.36768 56.3533 5.69275 57.4256C6.55115 57.8299 7.48901 58.0368 8.4375 58.0313H17.8125V56.1563H9.375V45.8438H7.5V56.0622C7.14697 55.9915 6.8042 55.8773 6.479 55.7231C4.81824 54.9573 3.75366 53.2973 3.75 51.4688V47.7188C3.7522 45.5464 4.82849 43.5158 6.62439 42.2941C7.70947 41.5492 8.99597 41.1526 10.3125 41.1563H17.8125C17.9777 41.1563 18.137 41.1739 18.2981 41.1849C17.981 42.0792 17.8165 43.0203 17.8125 43.9688V53.3438C17.8158 55.9315 19.9127 58.028 22.5 58.0313H25.3125V43.0313H23.4375V56.1563H22.5C20.9469 56.1563 19.6875 54.8969 19.6875 53.3438V43.9688C19.6875 40.344 22.626 37.4063 26.25 37.4063H33.75C34.9563 37.407 36.1384 37.741 37.1671 38.3709C37.2623 38.4229 37.3539 38.4815 37.4407 38.546C38.3192 39.1476 39.0403 39.9515 39.5427 40.8897C40.0477 41.8375 40.3125 42.8947 40.3125 43.9688V53.3438C40.3125 54.8969 39.0531 56.1563 37.5 56.1563H36.5625V43.0313H34.6875V58.0313H37.5C40.0877 58.028 42.1842 55.9315 42.1875 53.3438V43.9688C42.1831 43.0203 42.0194 42.0795 41.7026 41.1849C41.8641 41.1739 42.0234 41.1563 42.1875 41.1563H49.6875C51.0048 41.1526 52.2924 41.5503 53.3782 42.296C55.1726 43.5184 56.2474 45.5475 56.25 47.7188V51.4688C56.2467 53.3039 55.1741 54.9687 53.5053 55.7304C53.1848 55.882 52.8472 55.9933 52.5 56.0622V45.8438H50.625V56.1563H42.1875V58.0313H51.5625C52.5055 58.0372 53.4379 57.8328 54.2915 57.4329C56.6243 56.3639 58.1213 54.0348 58.125 51.4688V47.7188C58.1235 44.9286 56.7429 42.3198 54.4365 40.7491Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M26.25 56.1562H33.75V58.0313H26.25V56.1562Z"
+                  fill="#01A1DE"
+                />
+              </svg>
+            </div>
+            <h4>Done-For-You Denial Management</h4>
+            <p>
+              Rework queues, follow-up tracking, and payer-specific turnaround
+              management.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32.28 38.6399L28.2 34.5599C27.72 34.0799 27 34.0799 26.52 34.5599C26.04 35.0399 26.04 35.7599 26.52 36.2399L31.44 41.1599C31.68 41.3999 32.04 41.5199 32.28 41.5199C32.64 41.5199 32.88 41.3999 33.12 41.1599L43.08 31.1999C43.56 30.7199 43.56 29.9999 43.08 29.5199C42.6 29.0399 41.88 29.0399 41.4 29.5199L32.28 38.6399Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M57.12 49.0799L48.96 40.9199C49.56 39.4799 50.04 37.9199 50.16 36.3599C50.52 32.2799 49.32 28.1999 46.68 25.0799C45.24 23.2799 43.44 21.9599 41.4 21V14.76C41.4 11.88 39 9.47995 36 9.47995H32.76V7.79995C32.76 5.99995 31.32 4.55995 29.4 4.55995H25.8C25.2 2.63995 23.4 1.19995 21.36 1.19995C19.2 1.19995 17.52 2.63995 16.92 4.43995H13.32C11.4 4.55995 9.96003 5.99995 9.96003 7.79995V9.47995H6.72003C3.72003 9.47995 1.32003 11.88 1.32003 14.76V53.5199C1.20003 56.3999 3.72003 58.7999 6.72003 58.7999H36C39 58.7999 41.4 56.3999 41.4 53.3999V49.5599L48.96 57.1199C51.12 59.2799 54.72 59.3999 57 57.1199C59.28 54.8399 59.4 51.2399 57.12 49.0799ZM44.88 26.52C47.04 29.16 48.12 32.6399 47.76 36C47.28 40.9199 44.16 45 39.84 46.7999C39.84 46.7999 39.84 46.7999 39.72 46.7999C37.8 47.6399 35.76 47.8799 33.48 47.7599C26.28 47.0399 21.12 40.6799 21.84 33.4799C22.2 30.1199 23.76 27.1199 26.16 24.9599C26.16 24.9599 26.16 24.96 26.28 24.84C28.92 22.56 32.52 21.36 36.12 21.7199C37.44 21.84 38.64 22.1999 39.84 22.6799C41.76 23.6399 43.44 24.84 44.88 26.52ZM12.36 7.79995C12.36 7.31995 12.84 6.95995 13.32 6.95995H18C18.72 6.95995 19.2 6.47995 19.2 5.75995C19.2 4.55995 20.16 3.71995 21.36 3.71995C22.56 3.71995 23.64 4.67995 23.64 5.75995C23.64 6.47995 24.12 6.95995 24.84 6.95995H29.52C30 6.95995 30.48 7.31995 30.48 7.79995V13.56C30.48 14.04 30 14.4 29.52 14.4H13.32C12.84 14.4 12.36 14.04 12.36 13.56V7.79995ZM36 56.3999H6.72003C5.04003 56.3999 3.60003 55.0799 3.60003 53.5199V14.76C3.60003 13.2 4.92003 11.88 6.60003 11.88H9.84003V13.56C9.84003 15.36 11.28 16.8 13.2 16.8H29.4C31.2 16.8 32.76 15.36 32.76 13.56V11.88H36C37.68 11.88 39 13.2 39 14.76V20.04C38.16 19.8 37.2 19.5599 36.24 19.5599C31.92 19.0799 27.96 20.52 24.84 23.04H10.44C9.72003 23.04 9.24003 23.52 9.24003 24.24C9.24003 24.96 9.72003 25.44 10.44 25.44H22.56C21.72 26.52 21.12 27.6 20.52 28.92H10.56C9.84003 28.92 9.36003 29.4 9.36003 30.1199C9.36003 30.84 9.84003 31.32 10.56 31.32H19.92C19.8 32.0399 19.56 32.7599 19.56 33.4799V34.7999H10.56C9.84003 34.7999 9.36003 35.2799 9.36003 36C9.36003 36.7199 9.84003 37.1999 10.56 37.1999H19.56C19.68 38.3999 20.04 39.4799 20.4 40.68H10.56C9.84003 40.68 9.36003 41.16 9.36003 41.88C9.36003 42.5999 9.84003 43.08 10.56 43.08H21.6C22.32 44.4 23.28 45.4799 24.36 46.4399H10.56C9.84003 46.4399 9.36003 46.9199 9.36003 47.6399C9.36003 48.36 9.84003 48.84 10.56 48.84H27.96C29.64 49.68 31.32 50.1599 33.24 50.3999C35.16 50.6399 37.08 50.3999 39 49.9199V53.6399C39.12 54.9599 37.68 56.3999 36 56.3999ZM55.44 55.4399C54.12 56.7599 52.08 56.7599 50.76 55.4399L43.08 47.88C45 46.68 46.56 45.1199 47.76 43.1999L55.32 50.7599C56.76 52.0799 56.76 54.1199 55.44 55.4399Z"
+                  fill="#01A1DE"
+                />
+              </svg>
+            </div>
+            <h4>EOB Review</h4>
+            <p>100% underpayment audit and issue detection.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.5 57.0352H28.0195C28.5117 57.0352 28.9101 56.6367 28.9101 56.1445C28.9101 55.6523 28.5117 55.2539 28.0195 55.2539H22.5C22.0078 55.2539 21.6094 55.6523 21.6094 56.1445C21.6094 56.6367 22.0078 57.0352 22.5 57.0352ZM26.6484 29.2031C26.1562 29.2031 25.7461 29.6016 25.7461 30.1055V31.8633C25.7461 32.3555 26.1445 32.7656 26.6484 32.7656C27.1523 32.7656 27.5508 32.3672 27.5508 31.8633V30.1055C27.5508 29.6016 27.1523 29.2031 26.6484 29.2031ZM26.6484 33.7266C26.1562 33.7266 25.7461 34.125 25.7461 34.6289V36.3867C25.7461 36.8789 26.1445 37.2891 26.6484 37.2891C27.1523 37.2891 27.5508 36.8906 27.5508 36.3867V34.6289C27.5508 34.1367 27.1523 33.7266 26.6484 33.7266ZM17.2617 23.3203L18.8554 24.0117C18.9726 24.0586 19.0898 24.082 19.207 24.082C19.5586 24.082 19.8867 23.8828 20.039 23.543C20.2383 23.0859 20.0273 22.5586 19.5703 22.3594L17.9765 21.668C17.5195 21.4688 16.9922 21.6797 16.7929 22.1367C16.6054 22.5938 16.8047 23.1211 17.2617 23.3203ZM21.3515 25.0898L22.9453 25.7812C23.0625 25.8281 23.1797 25.8516 23.2969 25.8516C23.6484 25.8516 23.9765 25.6523 24.1289 25.3125C24.3281 24.8555 24.1172 24.3281 23.6601 24.1289L22.0664 23.4375C21.6094 23.2383 21.082 23.4492 20.8828 23.9062C20.6836 24.3633 20.8945 24.8906 21.3515 25.0898ZM27.0117 25.5703L26.1562 25.1953C25.6992 24.9961 25.1719 25.207 24.9726 25.6641C24.8906 25.8516 24.8789 26.0508 24.9258 26.2383L24.5742 26.3906C24.1172 26.5898 23.9062 27.1172 24.1054 27.5742C24.2578 27.9141 24.5859 28.1133 24.9258 28.1133C25.0429 28.1133 25.1719 28.0898 25.289 28.043L25.875 27.7852C26.0273 28.0547 26.3203 28.2305 26.6484 28.2305C27.1406 28.2305 27.5508 27.832 27.5508 27.3281V26.3906C27.5508 26.0391 27.3398 25.7109 27.0117 25.5703ZM22.4883 11.6484H28.0078C28.5 11.6484 28.8984 11.25 28.8984 10.7578C28.8984 10.2656 28.5 9.86719 28.0078 9.86719H22.4883C21.9961 9.86719 21.5976 10.2656 21.5976 10.7578C21.5976 11.25 21.9961 11.6484 22.4883 11.6484ZM18.6445 29.9648C18.4453 29.5078 17.9179 29.2969 17.4609 29.4961L15.75 30.2461C15.2929 30.4453 15.082 30.9727 15.2812 31.4297C15.4336 31.7695 15.7617 31.9687 16.1015 31.9687C16.2187 31.9687 16.3476 31.9453 16.4648 31.8984L18.1758 31.1484C18.6328 30.9609 18.8437 30.4219 18.6445 29.9648ZM52.0078 39.2227C52.5 39.2227 52.8984 38.8242 52.8984 38.332C52.8984 37.8398 52.5 37.4414 52.0078 37.4414H51.2226C50.7304 37.4414 50.332 37.8398 50.332 38.332C50.332 38.8242 50.7304 39.2227 51.2226 39.2227H52.0078ZM43.8281 45.3398H48.9258C49.4179 45.3398 49.8164 44.9414 49.8164 44.4492C49.8164 43.957 49.4179 43.5586 48.9258 43.5586H43.8281C43.3359 43.5586 42.9375 43.957 42.9375 44.4492C42.9375 44.9414 43.3359 45.3398 43.8281 45.3398ZM43.8281 39.2344H48.9258C49.4179 39.2344 49.8164 38.8359 49.8164 38.3438C49.8164 37.8516 49.4179 37.4531 48.9258 37.4531H43.8281C43.3359 37.4531 42.9375 37.8516 42.9375 38.3438C42.9375 38.8359 43.3359 39.2344 43.8281 39.2344ZM51.2344 45.3398H52.0195C52.5117 45.3398 52.9101 44.9414 52.9101 44.4492C52.9101 43.957 52.5117 43.5586 52.0195 43.5586H51.2344C50.7422 43.5586 50.3437 43.957 50.3437 44.4492C50.3437 44.9414 50.7422 45.3398 51.2344 45.3398ZM18.9492 42.5039L17.3906 43.1953C16.9336 43.3945 16.7344 43.9219 16.9336 44.3789C17.1562 44.8711 17.7187 45.0352 18.1172 44.8359L19.6758 44.1445C20.1328 43.9453 20.332 43.418 20.1328 42.9609C19.9453 42.5039 19.4062 42.3047 18.9492 42.5039ZM43.8281 42.293H44.6133C45.1054 42.293 45.5039 41.8945 45.5039 41.4023C45.5039 40.9102 45.1054 40.5117 44.6133 40.5117H43.8281C43.3359 40.5117 42.9375 40.9102 42.9375 41.4023C42.9375 41.8945 43.3359 42.293 43.8281 42.293ZM52.8984 41.3906C52.8984 40.8984 52.5 40.5 52.0078 40.5H46.9101C46.4179 40.5 46.0195 40.8984 46.0195 41.3906C46.0195 41.8828 46.4179 42.2812 46.9101 42.2812H52.0078C52.5 42.2812 52.8984 41.8828 52.8984 41.3906ZM23.0508 28.043C22.8515 27.5859 22.3242 27.375 21.8672 27.5742L20.1562 28.3242C19.6992 28.5234 19.4883 29.0508 19.6875 29.5078C19.8398 29.8477 20.1679 30.0469 20.5078 30.0469C20.625 30.0469 20.7539 30.0234 20.8711 29.9766L22.582 29.2266C23.039 29.0273 23.25 28.5 23.0508 28.043ZM57.6679 1.04297C56.9883 0.375 56.0976 0 55.1484 0L36.3398 0.0117188C34.3828 0.0117188 32.7773 1.60547 32.7773 3.57422V6.51562L13.6875 6.52734C11.7773 6.52734 10.2304 8.07422 10.2304 9.98438V21.9375L1.83982 25.6055C1.59373 25.7109 1.41795 25.9219 1.33592 26.168C1.28904 26.3086 1.28904 25.4648 1.30076 40.125C1.30076 40.4883 1.5117 40.8047 1.83982 40.9453L10.2304 44.6133V56.543C10.2304 58.4531 11.7773 60 13.6875 60L37.1719 59.9883C37.7109 59.9883 38.2148 59.8594 38.6719 59.6484C39.832 59.0859 40.6289 57.9023 40.6289 56.5312V48.457H52.0781C52.5703 48.457 52.9687 48.0586 52.9687 47.5664C52.9687 47.0742 52.5703 46.6758 52.0781 46.6758H40.6289L40.6172 17.6719C40.6875 17.6719 40.7461 17.6602 40.8164 17.6602L55.1367 17.6484C56.0859 17.6484 56.9765 17.2734 57.6562 16.6055C58.3242 15.9375 58.6992 15.0352 58.6992 14.0859L58.7109 3.5625C58.7109 2.61328 58.3359 1.72266 57.6679 1.04297ZM10.2422 42.6445L3.11717 39.5273V27.832L10.2422 30.9609V42.6445ZM10.2539 28.9922L4.41795 26.4375L10.2539 23.8945V28.9922ZM38.8711 56.5312C38.8828 57.457 38.1328 58.2188 37.207 58.2188C11.9648 58.2188 13.6406 58.2305 13.5469 58.207C12.7031 58.125 12.0351 57.4102 12.0351 56.543V54.0703L38.8711 54.0586V56.5312ZM38.8828 52.3125L12.0469 52.3242L12.0351 45.3984C13.9804 46.2422 14.2383 46.5 14.8008 46.3008L15.6562 45.9258C16.1133 45.7266 16.3125 45.1992 16.1133 44.7422C15.914 44.2852 15.3867 44.0859 14.9297 44.2852L14.4375 44.5078L12.0351 43.4414V31.7578L13.0547 32.2031C13.1719 32.25 13.289 32.2734 13.4179 32.2734C13.7695 32.2734 14.0976 32.0742 14.2383 31.7344C14.4375 31.2773 14.2265 30.75 13.7695 30.5508L12.0586 29.8008C12.0469 29.8008 12.0469 29.7891 12.0351 29.7891V23.1094L14.2969 22.043C14.6484 22.1836 14.8242 22.3242 15.1289 22.3242C16.1133 22.3242 16.3828 20.9883 15.4922 20.6016L14.6367 20.2266C14.625 20.2266 14.2734 20.0742 13.8867 20.25L12.0234 21.1289V9.99609C12.0234 9.07031 12.7734 8.32031 13.6992 8.32031L32.789 8.30859V21.457C32.789 21.7969 32.9765 22.0898 33.2812 22.2422H33.2929C33.6679 22.3945 33.9844 22.3242 34.207 22.1133L38.3203 18.6094C38.4844 18.4688 38.6719 18.3398 38.8594 18.2227L38.8711 46.6875H29.0859L25.3125 41.25C25.8867 41.625 26.414 41.1328 27.0117 40.9336C27.3398 40.793 27.5508 40.4648 27.5508 40.1133V39.1758C27.5508 38.6836 27.1406 38.2617 26.6367 38.2734C26.1328 38.2852 25.7461 38.7188 25.7461 39.2109V39.5273L25.4297 39.668C25.0312 39.8438 24.832 40.2656 24.914 40.6758L22.9453 37.8281C22.664 37.4297 22.1133 37.3242 21.7148 37.6055C21.3047 37.8867 21.2109 38.4375 21.4922 38.8477L22.8633 40.8047L21.4336 41.4375C20.9765 41.6367 20.7773 42.1641 20.9765 42.6211C21.1992 43.1133 21.7617 43.2773 22.1601 43.0781L23.7187 42.3867C23.7773 42.3633 23.8359 42.3281 23.8945 42.2812L27.914 48.082C28.0781 48.3164 28.3476 48.4688 28.6406 48.4688H38.8945V52.3125H38.8828ZM57.0586 14.1094C57.0586 14.6133 56.8594 15.082 56.5078 15.4453C56.1445 15.8086 55.664 16.0078 55.1601 16.0078L40.8398 16.0195C39 16.0195 37.8281 16.8516 37.2539 17.3438L34.4414 19.7344L34.4297 3.57422C34.4297 2.51953 35.2851 1.66406 36.3398 1.66406L55.1484 1.65234C55.6523 1.65234 56.1328 1.85156 56.4961 2.21484C56.8594 2.57812 57.0586 3.05859 57.0586 3.5625V14.1094ZM50.1328 3.78516H47.8711C47.414 3.78516 47.0508 4.14844 47.0508 4.60547V13.043C47.0508 13.5 47.414 13.8633 47.8711 13.8633C48.3281 13.8633 48.6914 13.5 48.6914 13.043V10.3359H49.6875L51.6679 13.4766C51.8203 13.7227 52.0898 13.8633 52.3594 13.8633C52.5117 13.8633 52.664 13.8281 52.7929 13.7344C53.1797 13.4883 53.2969 12.9844 53.0508 12.5977L51.4336 10.0312C52.4648 9.53906 53.1679 8.49609 53.1679 7.28906V6.82031C53.1679 5.14453 51.8086 3.78516 50.1328 3.78516ZM51.5273 7.28906C51.5273 8.0625 50.8945 8.68359 50.1328 8.68359H48.6914V5.42578H50.1328C50.9062 5.42578 51.5273 6.05859 51.5273 6.82031V7.28906ZM42.7617 4.30078C42.6328 3.97266 42.3164 3.77344 41.9883 3.77344C41.6601 3.77344 41.3437 3.97266 41.2148 4.30078L37.9687 12.6562C37.8047 13.0781 38.0156 13.5586 38.4375 13.7227C38.5312 13.7578 38.6367 13.7812 38.7304 13.7812C39.0586 13.7812 39.375 13.582 39.4922 13.2539L40.3945 10.9336H43.5703L44.4726 13.2539C44.6015 13.582 44.9062 13.7812 45.2344 13.7812C45.3281 13.7812 45.4336 13.7578 45.5273 13.7227C45.9492 13.5586 46.1601 13.0781 45.9961 12.6562L42.7617 4.30078ZM41.039 9.28125L41.9883 6.84375L42.9375 9.28125H41.039Z"
+                  fill="#01A1DE"
+                />
+              </svg>
+            </div>
+            <h4>A/R Monitoring & Follow-up</h4>
+            <p>
+              Structured workflows to help reduce aging claims and revenue blind
+              spots.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_410_76)">
+                  <path
+                    d="M34.0053 27.0934C34.0053 24.8675 32.1999 23.0566 29.9808 23.0566C27.7616 23.0566 25.9562 24.8675 25.9562 27.0934C25.9562 28.9655 27.2332 30.5436 28.9593 30.9983L28.9796 35.2757C28.9823 35.8405 29.441 36.282 30.0052 36.282H30.0102C30.5766 36.282 31.0335 35.8382 31.0309 35.2718L31.0105 30.9959C32.7325 30.5383 34.0053 28.9624 34.0053 27.0934ZM29.9809 29.0791C28.8928 29.0791 28.0076 28.1883 28.0076 27.0934C28.0076 25.9986 28.8927 25.1079 29.9809 25.1079C31.0689 25.1079 31.9541 25.9986 31.9541 27.0934C31.9541 28.1883 31.0689 29.0791 29.9809 29.0791Z"
+                    fill="#01A1DE"
+                  />
+                  <path
+                    d="M56.1501 25.8981C54.3828 25.8981 52.8909 27.0512 52.4404 28.7178H45.5368C45.9418 26.7948 46.2363 24.8717 46.4653 22.8204H51.4745C52.0409 22.8204 52.4359 22.401 52.4359 21.8346V12.0398C54.1026 11.5919 55.2978 10.1 55.2978 8.33245C55.2978 6.21206 53.5869 4.48706 51.464 4.48706C49.3412 4.48706 47.5901 6.21206 47.5901 8.33245C47.5901 10.096 48.8462 11.5851 50.3846 12.0367V20.7691H46.6773C46.8264 19.2307 46.9453 17.5736 47.0556 15.9401C47.0999 15.2854 46.51 14.7863 45.8746 14.885C44.6567 15.118 43.4251 15.2935 42.1827 15.2935C38.0558 15.2932 34.2637 13.4219 30.6515 9.62975C30.138 9.19219 29.6328 9.20155 29.1363 9.65783C25.3004 14.158 19.9777 16.0287 14.1262 14.8846C13.4885 14.7599 12.8617 15.2853 12.906 15.9404C13.0185 17.5998 13.1368 19.2307 13.2813 20.7691H9.8718V12.0367C11.4103 11.5851 12.6796 10.0962 12.6796 8.33245C12.6796 6.21206 10.9472 4.48706 8.82436 4.48706C6.70154 4.48706 4.98256 6.21206 4.98256 8.33245C4.98256 10.1001 6.15385 11.5919 7.82051 12.0398V21.8345C7.82051 22.4009 8.25795 22.8203 8.82436 22.8203H13.4887C13.7154 24.8715 14.0045 26.7946 14.4033 28.7177H7.55974C7.1091 27.051 5.61731 25.898 3.85 25.898C1.72705 25.8981 0 27.6232 0 29.7436C0 31.8639 1.72705 33.5889 3.84987 33.5889C5.61718 33.5889 7.10897 32.4358 7.55962 30.7691H14.8924C15.4417 32.8249 16.2181 34.7317 17.0831 36.6665H8.82436C8.25795 36.6665 7.82051 37.086 7.82051 37.6524V47.9616C6.15385 48.4112 4.98551 49.9017 4.98551 51.6673C4.98551 53.7877 6.70705 55.5127 8.82987 55.5127C10.9528 55.5127 12.688 53.7877 12.688 51.6673C12.688 49.9017 11.5385 48.4112 9.8718 47.9616V38.7178H18.2572C20.8838 42.8204 24.6388 45.7099 29.6368 47.5737C29.8781 47.646 30.1197 47.6467 30.3615 47.5755C35.3132 45.681 39.0418 42.6922 41.66 38.7178H50.3846V47.9616C48.8462 48.4112 47.5924 49.9017 47.5924 51.6673C47.5924 53.7877 49.3355 55.5127 51.4585 55.5127C53.5814 55.5127 55.2842 53.7877 55.2842 51.6673C55.2842 49.9017 54.1026 48.4112 52.4359 47.9616V37.6526C52.4359 37.0862 52.0409 36.6667 51.4745 36.6667H42.8409C43.7226 34.7376 44.4969 32.8224 45.045 30.7692H52.4403C52.8909 32.4359 54.3827 33.589 56.15 33.589C58.273 33.5889 60 31.8639 60 29.7435C60 27.6231 58.273 25.8981 56.1501 25.8981ZM49.6815 8.33245C49.6815 7.34309 50.4883 6.53834 51.48 6.53834C52.4717 6.53834 53.2786 7.34309 53.2786 8.33245C53.2786 9.32181 52.4717 10.1265 51.48 10.1265C50.4883 10.1265 49.6815 9.32181 49.6815 8.33245ZM7.02026 8.33245C7.02026 7.34309 7.82718 6.53834 8.81885 6.53834C9.81051 6.53834 10.6174 7.34309 10.6174 8.33245C10.6174 9.32181 9.81051 10.1265 8.81885 10.1265C7.82718 10.1265 7.02026 9.32181 7.02026 8.33245ZM3.84987 31.5376C2.85821 31.5376 2.05128 30.7328 2.05128 29.7436C2.05128 28.7542 2.85821 27.9495 3.84987 27.9495C4.84154 27.9495 5.64846 28.7542 5.64846 29.7436C5.64859 30.7328 4.84167 31.5376 3.84987 31.5376ZM10.6229 51.6673C10.6229 52.6567 9.81603 53.4614 8.82436 53.4614C7.83269 53.4614 7.0259 52.6567 7.0259 51.6673C7.0259 50.678 7.83269 49.8732 8.82436 49.8732C9.81603 49.8732 10.6229 50.678 10.6229 51.6673ZM53.2731 51.6673C53.2731 52.6567 52.4662 53.4614 51.4745 53.4614C50.4828 53.4614 49.6759 52.6567 49.6759 51.6673C49.6759 50.678 50.4828 49.8732 51.4745 49.8732C52.4662 49.8732 53.2731 50.678 53.2731 51.6673ZM15.0431 17.1099C20.5771 17.8231 26.2312 16.0991 29.9564 11.8357C33.9881 15.7446 39.2459 18.0482 44.9194 17.1021C43.9605 30.2827 41.9847 40.7144 29.9905 45.4935C17.9891 40.8268 16.0086 30.3578 15.0431 17.1099ZM56.1501 31.5376C55.1585 31.5376 54.3515 30.7328 54.3515 29.7436C54.3515 28.7542 55.1585 27.9495 56.1501 27.9495C57.1418 27.9495 57.9487 28.7542 57.9487 29.7436C57.9487 30.7328 57.1418 31.5376 56.1501 31.5376Z"
+                    fill="#01A1DE"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_410_76">
+                    <rect width="60" height="60" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h4>Security & Compliance Standards</h4>
+            <p>
+              HIPAA-aligned processes with role-based access and strict audit
+              controls.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M55.0548 11.8631L44.5548 7.57738C44.3041 7.47486 44.0243 7.47486 43.7736 7.57738L33.2736 11.8631C33.079 11.9427 32.9122 12.0799 32.7946 12.2571C32.6771 12.4344 32.6143 12.6434 32.6142 12.8574V23.9317C32.6197 25.9665 33.1386 27.9656 34.121 29.7364C35.1035 31.5071 36.5163 32.9898 38.2233 34.0417L43.6245 37.3481C43.7876 37.4478 43.9741 37.5005 44.1642 37.5005C44.3543 37.5005 44.5409 37.4478 44.7039 37.3481L49.4142 34.4638V46.4638C49.4137 46.9297 49.2321 47.3763 48.9093 47.7057C48.5864 48.0351 48.1488 48.2204 47.6922 48.221H7.03623C6.5797 48.2204 6.14203 48.0351 5.81921 47.7057C5.49639 47.3763 5.31479 46.9297 5.31423 46.4638V22.5002H29.4642C29.7427 22.5002 30.0098 22.3874 30.2067 22.1864C30.4036 21.9855 30.5142 21.713 30.5142 21.4288C30.5142 21.1447 30.4036 20.8721 30.2067 20.6712C30.0098 20.4703 29.7427 20.3574 29.4642 20.3574H5.31423V17.8288C5.31479 17.363 5.49639 16.9164 5.81921 16.5869C6.14203 16.2575 6.5797 16.0722 7.03623 16.0717H29.4642C29.7427 16.0717 30.0098 15.9588 30.2067 15.7579C30.4036 15.5569 30.5142 15.2844 30.5142 15.0002C30.5142 14.7161 30.4036 14.4436 30.2067 14.2426C30.0098 14.0417 29.7427 13.9288 29.4642 13.9288H7.03623C6.02275 13.9294 5.05093 14.3405 4.33429 15.0717C3.61764 15.803 3.21479 16.7946 3.21423 17.8288V46.4574C3.21479 47.4916 3.61764 48.4832 4.33429 49.2145C5.05093 49.9457 6.02275 50.3568 7.03623 50.3574H47.6922C48.7057 50.3568 49.6775 49.9457 50.3942 49.2145C51.1108 48.4832 51.5137 47.4916 51.5142 46.4574V33.0002C52.8222 31.8936 53.8763 30.5076 54.602 28.9399C55.3277 27.3722 55.7074 25.6611 55.7142 23.9274V12.8574C55.7142 12.6434 55.6514 12.4344 55.5338 12.2571C55.4163 12.0799 55.2495 11.9427 55.0548 11.8631ZM53.6142 23.9317C53.6099 25.5967 53.1853 27.2324 52.3812 28.6812C51.5771 30.13 50.4208 31.343 49.0236 32.2031L44.1642 35.1795L39.3048 32.2031C37.9077 31.343 36.7514 30.13 35.9473 28.6812C35.1432 27.2324 34.7185 25.5967 34.7142 23.9317V13.5817L44.1642 9.72452L53.6142 13.5817V23.9317Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M40.7076 20.8547C40.6101 20.7551 40.4943 20.6761 40.3669 20.6221C40.2395 20.5681 40.1029 20.5403 39.9649 20.5402C39.8269 20.5401 39.6903 20.5677 39.5628 20.6215C39.4353 20.6753 39.3194 20.7542 39.2218 20.8537C39.1242 20.9531 39.0467 21.0713 38.9938 21.2013C38.9409 21.3313 38.9137 21.4707 38.9136 21.6115C38.9135 21.7523 38.9406 21.8917 38.9933 22.0218C39.046 22.1519 39.1233 22.2701 39.2208 22.3697L42.0222 25.2262C42.2191 25.427 42.4861 25.5399 42.7645 25.5399C43.0429 25.5399 43.31 25.427 43.5069 25.2262L49.1076 19.5112C49.3044 19.31 49.4149 19.0372 49.4147 18.7529C49.4145 18.4686 49.3037 18.196 49.1065 17.9951C48.9093 17.7942 48.6421 17.6814 48.3634 17.6816C48.0848 17.6818 47.8176 17.795 47.6208 17.9962L42.7635 22.9547L40.7076 20.8547Z"
+                  fill="#01A1DE"
+                />
+                <path
+                  d="M10.5643 41.7861C10.2858 41.7861 10.0187 41.899 9.82182 42.0999C9.62491 42.3009 9.51428 42.5734 9.51428 42.8576C9.51428 43.1417 9.62491 43.4142 9.82182 43.6152C10.0187 43.8161 10.2858 43.929 10.5643 43.929H18.9643C19.2428 43.929 19.5098 43.8161 19.7067 43.6152C19.9037 43.4142 20.0143 43.1417 20.0143 42.8576C20.0143 42.5734 19.9037 42.3009 19.7067 42.0999C19.5098 41.899 19.2428 41.7861 18.9643 41.7861H10.5643Z"
+                  fill="#01A1DE"
+                />
+              </svg>
+            </div>
+            <h4>Payment Posting</h4>
+            <p>
+              Ensure accurate posting, identify underpaid claims, and manage
+              appeals.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a
+            href="javascript:void(0)"
+            class="btn btn--primary js-open-contact-modal"
+            onclick="dataLayer.push({ event: 'AM_Get_In_Touch_With_Us' })"
+          >
+            Optimize Your Billing with DohRx
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits-section" id="ben-sect-lp6">
+      <div class="container benefits__container">
+        <div class="benefits__content">
+          <h2>
+            What You Can<br /><span class="text-highlight"
+              >Expect Over Time</span
+            >
+          </h2>
+          <p>With DohRx, practices typically gain:</p>
+          <ul class="check-list-green">
+            <li>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.2345 17.8828C27.6448 16.9655 27.0552 16.081 26.4655 15.1638C26.3345 14.9672 26.3345 14.8362 26.4655 14.6397C27.0552 13.7552 27.6121 12.8707 28.2017 11.9862C28.8897 10.9379 28.5293 9.92242 27.35 9.49655C26.3672 9.13621 25.3845 8.7431 24.4017 8.38276C24.2052 8.31725 24.1069 8.18621 24.1069 7.9569C24.0741 6.87586 24.0086 5.79483 23.9431 4.74655C23.8776 3.6 22.9931 2.94483 21.8793 3.23966C20.831 3.50173 19.7828 3.79655 18.7672 4.09138C18.5379 4.1569 18.4069 4.09138 18.2431 3.92759C17.5879 3.07586 16.9 2.2569 16.2448 1.43793C15.5241 0.520689 14.4103 0.520689 13.6569 1.43793C13.0017 2.2569 12.3138 3.07586 11.6914 3.89483C11.5276 4.12414 11.3638 4.1569 11.1017 4.09138C10.0862 3.79656 9.07069 3.53449 8.35 3.33793C6.94138 3.01035 6.08966 3.56724 6.02414 4.74655C5.95862 5.82759 5.8931 6.90863 5.86034 8.02242C5.86034 8.25172 5.76207 8.35 5.56552 8.44828C4.55 8.84138 3.53448 9.23448 2.51897 9.62759C1.47069 10.0535 1.1431 11.069 1.76552 12.019C2.35517 12.9362 2.94483 13.8207 3.53448 14.7379C3.66551 14.9345 3.66551 15.0655 3.53448 15.2948C2.91207 16.2121 2.32241 17.1293 1.73276 18.0793C1.17586 18.9638 1.5362 20.0121 2.51896 20.4052C3.53448 20.7983 4.58275 21.1914 5.59827 21.5845C5.82758 21.65 5.89309 21.781 5.89309 22.0103C5.92586 23.0586 6.05689 24.0741 6.05689 25.1224C6.05689 26.1707 6.97413 27.1207 8.25171 26.7276C9.26723 26.4 10.2827 26.1707 11.2983 25.8759C11.4948 25.8103 11.6259 25.8431 11.7569 26.0397C12.4448 26.8914 13.1 27.7103 13.7879 28.5621C14.5414 29.4793 15.6224 29.4793 16.3431 28.5621C17.031 27.7103 17.6862 26.8914 18.3741 26.0397C18.5052 25.8759 18.6034 25.8103 18.8327 25.8759C19.881 26.1707 20.9293 26.4328 21.9776 26.7276C23.0586 27.0224 23.9758 26.3672 24.0086 25.2535C24.0741 24.1724 24.1396 23.0914 24.1724 21.9776C24.1724 21.7155 24.3034 21.6172 24.5 21.5517C25.4827 21.1914 26.4983 20.7983 27.481 20.4052C28.5293 19.881 28.8569 18.8328 28.2345 17.8828ZM20.4052 12.5104L13.8534 19.0621C13.6897 19.2259 13.4603 19.3569 13.231 19.3897C13.1655 19.3897 13.0672 19.4224 13.0017 19.4224C12.7069 19.4224 12.3793 19.2914 12.15 19.0621L9.4638 16.3759C9.00518 15.9172 9.00518 15.1638 9.4638 14.7052C9.92242 14.2466 10.6759 14.2466 11.1345 14.7052L12.969 16.5397L18.669 10.8397C19.1276 10.381 19.881 10.381 20.3397 10.8397C20.8638 11.2983 20.8638 12.0517 20.4052 12.5104Z"
+                  fill="url(#paint0_linear_74_491)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_74_491"
+                    x1="15"
+                    y1="0.75"
+                    x2="15"
+                    y2="29.25"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0AB981" />
+                    <stop offset="1" stop-color="#0BB7D0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Reduced Administrative Overhead
+            </li>
+            <li>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.2345 17.8828C27.6448 16.9655 27.0552 16.081 26.4655 15.1638C26.3345 14.9672 26.3345 14.8362 26.4655 14.6397C27.0552 13.7552 27.6121 12.8707 28.2017 11.9862C28.8897 10.9379 28.5293 9.92242 27.35 9.49655C26.3672 9.13621 25.3845 8.7431 24.4017 8.38276C24.2052 8.31725 24.1069 8.18621 24.1069 7.9569C24.0741 6.87586 24.0086 5.79483 23.9431 4.74655C23.8776 3.6 22.9931 2.94483 21.8793 3.23966C20.831 3.50173 19.7828 3.79655 18.7672 4.09138C18.5379 4.1569 18.4069 4.09138 18.2431 3.92759C17.5879 3.07586 16.9 2.2569 16.2448 1.43793C15.5241 0.520689 14.4103 0.520689 13.6569 1.43793C13.0017 2.2569 12.3138 3.07586 11.6914 3.89483C11.5276 4.12414 11.3638 4.1569 11.1017 4.09138C10.0862 3.79656 9.07069 3.53449 8.35 3.33793C6.94138 3.01035 6.08966 3.56724 6.02414 4.74655C5.95862 5.82759 5.8931 6.90863 5.86034 8.02242C5.86034 8.25172 5.76207 8.35 5.56552 8.44828C4.55 8.84138 3.53448 9.23448 2.51897 9.62759C1.47069 10.0535 1.1431 11.069 1.76552 12.019C2.35517 12.9362 2.94483 13.8207 3.53448 14.7379C3.66551 14.9345 3.66551 15.0655 3.53448 15.2948C2.91207 16.2121 2.32241 17.1293 1.73276 18.0793C1.17586 18.9638 1.5362 20.0121 2.51896 20.4052C3.53448 20.7983 4.58275 21.1914 5.59827 21.5845C5.82758 21.65 5.89309 21.781 5.89309 22.0103C5.92586 23.0586 6.05689 24.0741 6.05689 25.1224C6.05689 26.1707 6.97413 27.1207 8.25171 26.7276C9.26723 26.4 10.2827 26.1707 11.2983 25.8759C11.4948 25.8103 11.6259 25.8431 11.7569 26.0397C12.4448 26.8914 13.1 27.7103 13.7879 28.5621C14.5414 29.4793 15.6224 29.4793 16.3431 28.5621C17.031 27.7103 17.6862 26.8914 18.3741 26.0397C18.5052 25.8759 18.6034 25.8103 18.8327 25.8759C19.881 26.1707 20.9293 26.4328 21.9776 26.7276C23.0586 27.0224 23.9758 26.3672 24.0086 25.2535C24.0741 24.1724 24.1396 23.0914 24.1724 21.9776C24.1724 21.7155 24.3034 21.6172 24.5 21.5517C25.4827 21.1914 26.4983 20.7983 27.481 20.4052C28.5293 19.881 28.8569 18.8328 28.2345 17.8828ZM20.4052 12.5104L13.8534 19.0621C13.6897 19.2259 13.4603 19.3569 13.231 19.3897C13.1655 19.3897 13.0672 19.4224 13.0017 19.4224C12.7069 19.4224 12.3793 19.2914 12.15 19.0621L9.4638 16.3759C9.00518 15.9172 9.00518 15.1638 9.4638 14.7052C9.92242 14.2466 10.6759 14.2466 11.1345 14.7052L12.969 16.5397L18.669 10.8397C19.1276 10.381 19.881 10.381 20.3397 10.8397C20.8638 11.2983 20.8638 12.0517 20.4052 12.5104Z"
+                  fill="url(#paint0_linear_74_491)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_74_491"
+                    x1="15"
+                    y1="0.75"
+                    x2="15"
+                    y2="29.25"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0AB981" />
+                    <stop offset="1" stop-color="#0BB7D0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Stronger Visibility Into Billing Performance
+            </li>
+            <li>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.2345 17.8828C27.6448 16.9655 27.0552 16.081 26.4655 15.1638C26.3345 14.9672 26.3345 14.8362 26.4655 14.6397C27.0552 13.7552 27.6121 12.8707 28.2017 11.9862C28.8897 10.9379 28.5293 9.92242 27.35 9.49655C26.3672 9.13621 25.3845 8.7431 24.4017 8.38276C24.2052 8.31725 24.1069 8.18621 24.1069 7.9569C24.0741 6.87586 24.0086 5.79483 23.9431 4.74655C23.8776 3.6 22.9931 2.94483 21.8793 3.23966C20.831 3.50173 19.7828 3.79655 18.7672 4.09138C18.5379 4.1569 18.4069 4.09138 18.2431 3.92759C17.5879 3.07586 16.9 2.2569 16.2448 1.43793C15.5241 0.520689 14.4103 0.520689 13.6569 1.43793C13.0017 2.2569 12.3138 3.07586 11.6914 3.89483C11.5276 4.12414 11.3638 4.1569 11.1017 4.09138C10.0862 3.79656 9.07069 3.53449 8.35 3.33793C6.94138 3.01035 6.08966 3.56724 6.02414 4.74655C5.95862 5.82759 5.8931 6.90863 5.86034 8.02242C5.86034 8.25172 5.76207 8.35 5.56552 8.44828C4.55 8.84138 3.53448 9.23448 2.51897 9.62759C1.47069 10.0535 1.1431 11.069 1.76552 12.019C2.35517 12.9362 2.94483 13.8207 3.53448 14.7379C3.66551 14.9345 3.66551 15.0655 3.53448 15.2948C2.91207 16.2121 2.32241 17.1293 1.73276 18.0793C1.17586 18.9638 1.5362 20.0121 2.51896 20.4052C3.53448 20.7983 4.58275 21.1914 5.59827 21.5845C5.82758 21.65 5.89309 21.781 5.89309 22.0103C5.92586 23.0586 6.05689 24.0741 6.05689 25.1224C6.05689 26.1707 6.97413 27.1207 8.25171 26.7276C9.26723 26.4 10.2827 26.1707 11.2983 25.8759C11.4948 25.8103 11.6259 25.8431 11.7569 26.0397C12.4448 26.8914 13.1 27.7103 13.7879 28.5621C14.5414 29.4793 15.6224 29.4793 16.3431 28.5621C17.031 27.7103 17.6862 26.8914 18.3741 26.0397C18.5052 25.8759 18.6034 25.8103 18.8327 25.8759C19.881 26.1707 20.9293 26.4328 21.9776 26.7276C23.0586 27.0224 23.9758 26.3672 24.0086 25.2535C24.0741 24.1724 24.1396 23.0914 24.1724 21.9776C24.1724 21.7155 24.3034 21.6172 24.5 21.5517C25.4827 21.1914 26.4983 20.7983 27.481 20.4052C28.5293 19.881 28.8569 18.8328 28.2345 17.8828ZM20.4052 12.5104L13.8534 19.0621C13.6897 19.2259 13.4603 19.3569 13.231 19.3897C13.1655 19.3897 13.0672 19.4224 13.0017 19.4224C12.7069 19.4224 12.3793 19.2914 12.15 19.0621L9.4638 16.3759C9.00518 15.9172 9.00518 15.1638 9.4638 14.7052C9.92242 14.2466 10.6759 14.2466 11.1345 14.7052L12.969 16.5397L18.669 10.8397C19.1276 10.381 19.881 10.381 20.3397 10.8397C20.8638 11.2983 20.8638 12.0517 20.4052 12.5104Z"
+                  fill="url(#paint0_linear_74_491)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_74_491"
+                    x1="15"
+                    y1="0.75"
+                    x2="15"
+                    y2="29.25"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0AB981" />
+                    <stop offset="1" stop-color="#0BB7D0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Earlier Detection Of Revenue Leak Patterns
+            </li>
+            <li>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.2345 17.8828C27.6448 16.9655 27.0552 16.081 26.4655 15.1638C26.3345 14.9672 26.3345 14.8362 26.4655 14.6397C27.0552 13.7552 27.6121 12.8707 28.2017 11.9862C28.8897 10.9379 28.5293 9.92242 27.35 9.49655C26.3672 9.13621 25.3845 8.7431 24.4017 8.38276C24.2052 8.31725 24.1069 8.18621 24.1069 7.9569C24.0741 6.87586 24.0086 5.79483 23.9431 4.74655C23.8776 3.6 22.9931 2.94483 21.8793 3.23966C20.831 3.50173 19.7828 3.79655 18.7672 4.09138C18.5379 4.1569 18.4069 4.09138 18.2431 3.92759C17.5879 3.07586 16.9 2.2569 16.2448 1.43793C15.5241 0.520689 14.4103 0.520689 13.6569 1.43793C13.0017 2.2569 12.3138 3.07586 11.6914 3.89483C11.5276 4.12414 11.3638 4.1569 11.1017 4.09138C10.0862 3.79656 9.07069 3.53449 8.35 3.33793C6.94138 3.01035 6.08966 3.56724 6.02414 4.74655C5.95862 5.82759 5.8931 6.90863 5.86034 8.02242C5.86034 8.25172 5.76207 8.35 5.56552 8.44828C4.55 8.84138 3.53448 9.23448 2.51897 9.62759C1.47069 10.0535 1.1431 11.069 1.76552 12.019C2.35517 12.9362 2.94483 13.8207 3.53448 14.7379C3.66551 14.9345 3.66551 15.0655 3.53448 15.2948C2.91207 16.2121 2.32241 17.1293 1.73276 18.0793C1.17586 18.9638 1.5362 20.0121 2.51896 20.4052C3.53448 20.7983 4.58275 21.1914 5.59827 21.5845C5.82758 21.65 5.89309 21.781 5.89309 22.0103C5.92586 23.0586 6.05689 24.0741 6.05689 25.1224C6.05689 26.1707 6.97413 27.1207 8.25171 26.7276C9.26723 26.4 10.2827 26.1707 11.2983 25.8759C11.4948 25.8103 11.6259 25.8431 11.7569 26.0397C12.4448 26.8914 13.1 27.7103 13.7879 28.5621C14.5414 29.4793 15.6224 29.4793 16.3431 28.5621C17.031 27.7103 17.6862 26.8914 18.3741 26.0397C18.5052 25.8759 18.6034 25.8103 18.8327 25.8759C19.881 26.1707 20.9293 26.4328 21.9776 26.7276C23.0586 27.0224 23.9758 26.3672 24.0086 25.2535C24.0741 24.1724 24.1396 23.0914 24.1724 21.9776C24.1724 21.7155 24.3034 21.6172 24.5 21.5517C25.4827 21.1914 26.4983 20.7983 27.481 20.4052C28.5293 19.881 28.8569 18.8328 28.2345 17.8828ZM20.4052 12.5104L13.8534 19.0621C13.6897 19.2259 13.4603 19.3569 13.231 19.3897C13.1655 19.3897 13.0672 19.4224 13.0017 19.4224C12.7069 19.4224 12.3793 19.2914 12.15 19.0621L9.4638 16.3759C9.00518 15.9172 9.00518 15.1638 9.4638 14.7052C9.92242 14.2466 10.6759 14.2466 11.1345 14.7052L12.969 16.5397L18.669 10.8397C19.1276 10.381 19.881 10.381 20.3397 10.8397C20.8638 11.2983 20.8638 12.0517 20.4052 12.5104Z"
+                  fill="url(#paint0_linear_74_491)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_74_491"
+                    x1="15"
+                    y1="0.75"
+                    x2="15"
+                    y2="29.25"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0AB981" />
+                    <stop offset="1" stop-color="#0BB7D0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              More Predictable Payment Cycles
+            </li>
+            <li>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.2345 17.8828C27.6448 16.9655 27.0552 16.081 26.4655 15.1638C26.3345 14.9672 26.3345 14.8362 26.4655 14.6397C27.0552 13.7552 27.6121 12.8707 28.2017 11.9862C28.8897 10.9379 28.5293 9.92242 27.35 9.49655C26.3672 9.13621 25.3845 8.7431 24.4017 8.38276C24.2052 8.31725 24.1069 8.18621 24.1069 7.9569C24.0741 6.87586 24.0086 5.79483 23.9431 4.74655C23.8776 3.6 22.9931 2.94483 21.8793 3.23966C20.831 3.50173 19.7828 3.79655 18.7672 4.09138C18.5379 4.1569 18.4069 4.09138 18.2431 3.92759C17.5879 3.07586 16.9 2.2569 16.2448 1.43793C15.5241 0.520689 14.4103 0.520689 13.6569 1.43793C13.0017 2.2569 12.3138 3.07586 11.6914 3.89483C11.5276 4.12414 11.3638 4.1569 11.1017 4.09138C10.0862 3.79656 9.07069 3.53449 8.35 3.33793C6.94138 3.01035 6.08966 3.56724 6.02414 4.74655C5.95862 5.82759 5.8931 6.90863 5.86034 8.02242C5.86034 8.25172 5.76207 8.35 5.56552 8.44828C4.55 8.84138 3.53448 9.23448 2.51897 9.62759C1.47069 10.0535 1.1431 11.069 1.76552 12.019C2.35517 12.9362 2.94483 13.8207 3.53448 14.7379C3.66551 14.9345 3.66551 15.0655 3.53448 15.2948C2.91207 16.2121 2.32241 17.1293 1.73276 18.0793C1.17586 18.9638 1.5362 20.0121 2.51896 20.4052C3.53448 20.7983 4.58275 21.1914 5.59827 21.5845C5.82758 21.65 5.89309 21.781 5.89309 22.0103C5.92586 23.0586 6.05689 24.0741 6.05689 25.1224C6.05689 26.1707 6.97413 27.1207 8.25171 26.7276C9.26723 26.4 10.2827 26.1707 11.2983 25.8759C11.4948 25.8103 11.6259 25.8431 11.7569 26.0397C12.4448 26.8914 13.1 27.7103 13.7879 28.5621C14.5414 29.4793 15.6224 29.4793 16.3431 28.5621C17.031 27.7103 17.6862 26.8914 18.3741 26.0397C18.5052 25.8759 18.6034 25.8103 18.8327 25.8759C19.881 26.1707 20.9293 26.4328 21.9776 26.7276C23.0586 27.0224 23.9758 26.3672 24.0086 25.2535C24.0741 24.1724 24.1396 23.0914 24.1724 21.9776C24.1724 21.7155 24.3034 21.6172 24.5 21.5517C25.4827 21.1914 26.4983 20.7983 27.481 20.4052C28.5293 19.881 28.8569 18.8328 28.2345 17.8828ZM20.4052 12.5104L13.8534 19.0621C13.6897 19.2259 13.4603 19.3569 13.231 19.3897C13.1655 19.3897 13.0672 19.4224 13.0017 19.4224C12.7069 19.4224 12.3793 19.2914 12.15 19.0621L9.4638 16.3759C9.00518 15.9172 9.00518 15.1638 9.4638 14.7052C9.92242 14.2466 10.6759 14.2466 11.1345 14.7052L12.969 16.5397L18.669 10.8397C19.1276 10.381 19.881 10.381 20.3397 10.8397C20.8638 11.2983 20.8638 12.0517 20.4052 12.5104Z"
+                  fill="url(#paint0_linear_74_491)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_74_491"
+                    x1="15"
+                    y1="0.75"
+                    x2="15"
+                    y2="29.25"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0AB981" />
+                    <stop offset="1" stop-color="#0BB7D0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Smoother Patient-To-Payment Workflow
+            </li>
+            <li>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.2345 17.8828C27.6448 16.9655 27.0552 16.081 26.4655 15.1638C26.3345 14.9672 26.3345 14.8362 26.4655 14.6397C27.0552 13.7552 27.6121 12.8707 28.2017 11.9862C28.8897 10.9379 28.5293 9.92242 27.35 9.49655C26.3672 9.13621 25.3845 8.7431 24.4017 8.38276C24.2052 8.31725 24.1069 8.18621 24.1069 7.9569C24.0741 6.87586 24.0086 5.79483 23.9431 4.74655C23.8776 3.6 22.9931 2.94483 21.8793 3.23966C20.831 3.50173 19.7828 3.79655 18.7672 4.09138C18.5379 4.1569 18.4069 4.09138 18.2431 3.92759C17.5879 3.07586 16.9 2.2569 16.2448 1.43793C15.5241 0.520689 14.4103 0.520689 13.6569 1.43793C13.0017 2.2569 12.3138 3.07586 11.6914 3.89483C11.5276 4.12414 11.3638 4.1569 11.1017 4.09138C10.0862 3.79656 9.07069 3.53449 8.35 3.33793C6.94138 3.01035 6.08966 3.56724 6.02414 4.74655C5.95862 5.82759 5.8931 6.90863 5.86034 8.02242C5.86034 8.25172 5.76207 8.35 5.56552 8.44828C4.55 8.84138 3.53448 9.23448 2.51897 9.62759C1.47069 10.0535 1.1431 11.069 1.76552 12.019C2.35517 12.9362 2.94483 13.8207 3.53448 14.7379C3.66551 14.9345 3.66551 15.0655 3.53448 15.2948C2.91207 16.2121 2.32241 17.1293 1.73276 18.0793C1.17586 18.9638 1.5362 20.0121 2.51896 20.4052C3.53448 20.7983 4.58275 21.1914 5.59827 21.5845C5.82758 21.65 5.89309 21.781 5.89309 22.0103C5.92586 23.0586 6.05689 24.0741 6.05689 25.1224C6.05689 26.1707 6.97413 27.1207 8.25171 26.7276C9.26723 26.4 10.2827 26.1707 11.2983 25.8759C11.4948 25.8103 11.6259 25.8431 11.7569 26.0397C12.4448 26.8914 13.1 27.7103 13.7879 28.5621C14.5414 29.4793 15.6224 29.4793 16.3431 28.5621C17.031 27.7103 17.6862 26.8914 18.3741 26.0397C18.5052 25.8759 18.6034 25.8103 18.8327 25.8759C19.881 26.1707 20.9293 26.4328 21.9776 26.7276C23.0586 27.0224 23.9758 26.3672 24.0086 25.2535C24.0741 24.1724 24.1396 23.0914 24.1724 21.9776C24.1724 21.7155 24.3034 21.6172 24.5 21.5517C25.4827 21.1914 26.4983 20.7983 27.481 20.4052C28.5293 19.881 28.8569 18.8328 28.2345 17.8828ZM20.4052 12.5104L13.8534 19.0621C13.6897 19.2259 13.4603 19.3569 13.231 19.3897C13.1655 19.3897 13.0672 19.4224 13.0017 19.4224C12.7069 19.4224 12.3793 19.2914 12.15 19.0621L9.4638 16.3759C9.00518 15.9172 9.00518 15.1638 9.4638 14.7052C9.92242 14.2466 10.6759 14.2466 11.1345 14.7052L12.969 16.5397L18.669 10.8397C19.1276 10.381 19.881 10.381 20.3397 10.8397C20.8638 11.2983 20.8638 12.0517 20.4052 12.5104Z"
+                  fill="url(#paint0_linear_74_491)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_74_491"
+                    x1="15"
+                    y1="0.75"
+                    x2="15"
+                    y2="29.25"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0AB981" />
+                    <stop offset="1" stop-color="#0BB7D0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Peace Of Mind Knowing Revenue Is Secure
+            </li>
+          </ul>
+        </div>
+        <div class="benefits__image">
+          <img src="./images/Image Container.png" alt="Dashboard" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section testimonial-section" id="test-sect-lp6">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Testimonials</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="top">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g opacity="0.2">
+                  <path
+                    d="M32 6C30.9391 6 29.9217 6.42143 29.1716 7.17157C28.4214 7.92172 28 8.93913 28 10V22C28 23.0609 28.4214 24.0783 29.1716 24.8284C29.9217 25.5786 30.9391 26 32 26C32.5304 26 33.0391 26.2107 33.4142 26.5858C33.7893 26.9609 34 27.4696 34 28V30C34 31.0609 33.5786 32.0783 32.8284 32.8284C32.0783 33.5786 31.0609 34 30 34C29.4696 34 28.9609 34.2107 28.5858 34.5858C28.2107 34.9609 28 35.4696 28 36V40C28 40.5304 28.2107 41.0391 28.5858 41.4142C28.9609 41.7893 29.4696 42 30 42C33.1826 42 36.2348 40.7357 38.4853 38.4853C40.7357 36.2348 42 33.1826 42 30V10C42 8.93913 41.5786 7.92172 40.8284 7.17157C40.0783 6.42143 39.0609 6 38 6H32Z"
+                    stroke="#2960EA"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 6C8.93913 6 7.92172 6.42143 7.17157 7.17157C6.42143 7.92172 6 8.93913 6 10V22C6 23.0609 6.42143 24.0783 7.17157 24.8284C7.92172 25.5786 8.93913 26 10 26C10.5304 26 11.0391 26.2107 11.4142 26.5858C11.7893 26.9609 12 27.4696 12 28V30C12 31.0609 11.5786 32.0783 10.8284 32.8284C10.0783 33.5786 9.06087 34 8 34C7.46957 34 6.96086 34.2107 6.58579 34.5858C6.21071 34.9609 6 35.4696 6 36V40C6 40.5304 6.21071 41.0391 6.58579 41.4142C6.96086 41.7893 7.46957 42 8 42C11.1826 42 14.2348 40.7357 16.4853 38.4853C18.7357 36.2348 20 33.1826 20 30V10C20 8.93913 19.5786 7.92172 18.8284 7.17157C18.0783 6.42143 17.0609 6 16 6H10Z"
+                    stroke="#2960EA"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              <div class="stars">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <p>
+                "Since partnering with DohRx, our office has experienced a
+                remarkable transformation in less than a year. I highly
+                recommend their services. They handle our insurance claims,
+                review and track denials, follow up with insurance companies,
+                and audit EOBs to identify underpayments. Their support has
+                lifted a tremendous burden from our team, allowing us to focus
+                more on patient care and practice growth. The DohRx team is
+                professional, responsive, and adaptable. Their willingness to
+                tailor solutions and provide valuable business insight has made
+                them an invaluable partner. I would confidently recommend DohRx
+                to any practice looking to streamline operations and strengthen
+                revenue management."
+              </p>
+            </div>
+            <div class="bottom">
+              <div class="author">
+                <div class="avatar">SB</div>
+                <div class="info">
+                  <strong>Sherri Blair</strong>
+                  <p>Office Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="top">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g opacity="0.2">
+                  <path
+                    d="M32 6C30.9391 6 29.9217 6.42143 29.1716 7.17157C28.4214 7.92172 28 8.93913 28 10V22C28 23.0609 28.4214 24.0783 29.1716 24.8284C29.9217 25.5786 30.9391 26 32 26C32.5304 26 33.0391 26.2107 33.4142 26.5858C33.7893 26.9609 34 27.4696 34 28V30C34 31.0609 33.5786 32.0783 32.8284 32.8284C32.0783 33.5786 31.0609 34 30 34C29.4696 34 28.9609 34.2107 28.5858 34.5858C28.2107 34.9609 28 35.4696 28 36V40C28 40.5304 28.2107 41.0391 28.5858 41.4142C28.9609 41.7893 29.4696 42 30 42C33.1826 42 36.2348 40.7357 38.4853 38.4853C40.7357 36.2348 42 33.1826 42 30V10C42 8.93913 41.5786 7.92172 40.8284 7.17157C40.0783 6.42143 39.0609 6 38 6H32Z"
+                    stroke="#2960EA"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 6C8.93913 6 7.92172 6.42143 7.17157 7.17157C6.42143 7.92172 6 8.93913 6 10V22C6 23.0609 6.42143 24.0783 7.17157 24.8284C7.92172 25.5786 8.93913 26 10 26C10.5304 26 11.0391 26.2107 11.4142 26.5858C11.7893 26.9609 12 27.4696 12 28V30C12 31.0609 11.5786 32.0783 10.8284 32.8284C10.0783 33.5786 9.06087 34 8 34C7.46957 34 6.96086 34.2107 6.58579 34.5858C6.21071 34.9609 6 35.4696 6 36V40C6 40.5304 6.21071 41.0391 6.58579 41.4142C6.96086 41.7893 7.46957 42 8 42C11.1826 42 14.2348 40.7357 16.4853 38.4853C18.7357 36.2348 20 33.1826 20 30V10C20 8.93913 19.5786 7.92172 18.8284 7.17157C18.0783 6.42143 17.0609 6 16 6H10Z"
+                    stroke="#2960EA"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              <div class="stars">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_170_2822)">
+                    <path
+                      d="M9.60416 1.91274C9.64068 1.83895 9.69709 1.77685 9.76704 1.73342C9.83698 1.69 9.91767 1.66699 9.99999 1.66699C10.0823 1.66699 10.163 1.69 10.233 1.73342C10.3029 1.77685 10.3593 1.83895 10.3958 1.91274L12.3208 5.8119C12.4476 6.06854 12.6348 6.29058 12.8663 6.45895C13.0979 6.62732 13.3668 6.737 13.65 6.77857L17.955 7.40857C18.0366 7.42039 18.1132 7.4548 18.1762 7.5079C18.2393 7.56101 18.2862 7.63069 18.3117 7.70908C18.3372 7.78746 18.3402 7.87141 18.3205 7.95143C18.3007 8.03146 18.259 8.10436 18.2 8.1619L15.0867 11.1936C14.8813 11.3937 14.7277 11.6406 14.639 11.9133C14.5503 12.1859 14.5292 12.476 14.5775 12.7586L15.3125 17.0419C15.3269 17.1234 15.3181 17.2074 15.2871 17.2841C15.2561 17.3609 15.2041 17.4274 15.1371 17.4761C15.0701 17.5247 14.9908 17.5536 14.9082 17.5593C14.8256 17.5651 14.7431 17.5475 14.67 17.5086L10.8217 15.4852C10.5681 15.3521 10.286 15.2825 9.99958 15.2825C9.71318 15.2825 9.43106 15.3521 9.17749 15.4852L5.32999 17.5086C5.25694 17.5472 5.17449 17.5646 5.09204 17.5588C5.00958 17.5529 4.93043 17.524 4.86357 17.4754C4.79672 17.4268 4.74485 17.3604 4.71387 17.2838C4.68289 17.2071 4.67404 17.1233 4.68833 17.0419L5.42249 12.7594C5.47099 12.4767 5.44998 12.1864 5.36128 11.9136C5.27257 11.6408 5.11883 11.3937 4.91333 11.1936L1.79999 8.16274C1.74049 8.10526 1.69832 8.03223 1.6783 7.95197C1.65827 7.8717 1.66119 7.78742 1.68673 7.70873C1.71226 7.63004 1.75938 7.5601 1.82272 7.50689C1.88607 7.45367 1.96308 7.41932 2.04499 7.40774L6.34916 6.77857C6.63271 6.73732 6.90199 6.62778 7.13381 6.45939C7.36564 6.291 7.55308 6.0688 7.67999 5.8119L9.60416 1.91274Z"
+                      fill="#D3287C"
+                      stroke="#D3287C"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_170_2822">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <p>
+                "Most billing companies just get paid and post payments without
+                questioning if we got paid the right amount. DohRx is different
+                - they're concerned about whether we're getting paid fairly.
+                They dig into the nitty gritty and figure out proper ways to
+                identify underpayments. This isn't just another company helping
+                us clean things up - they're really digging in and doing things
+                the way they should be done. We were writing off literally half
+                of everything we charge, and that number doesn't have to be that
+                low."
+              </p>
+            </div>
+            <div class="bottom">
+              <div class="author">
+                <div class="avatar">TU</div>
+                <div class="info">
+                  <strong>Dr. Tom Unger</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <section class="cta-footer" id="cta-sect-lp6">
+      <div class="container text-center">
+        <h2>Ready to Strengthen Your<br />Revenue Workflow?</h2>
+        <a
+          href="javascript:void(0)"
+          id="GSBM_LP1_footer"
+          class="btn js-open-zoho-popup2"
+          onclick="dataLayer.push({ event: 'AM_Get_Started_Brett' })"
+          >Get Started with Brett McCarthy, MBA</a
+        >
+        <p class="">
+          Flat-fee or hybrid billing with built-in audit, 100% recovery retained
+          by the client, and guaranteed operational outcomes.
+        </p>
+        <img
+          class="elements"
+          src="./images/footer-cta-element.svg"
+          alt="footer CTA Elements"
+          height="200"
+          width="300"
+        />
+      </div>
+    </section>
+
+    <footer class="footer" id="foot-lp6">
+      <div class="container text-center">
+        <p class="disclaimer">
+          DISCLAIMER: Results, timelines, and savings vary by practice. No
+          financial or performance outcomes are guaranteed. DohRx does not
+          provide legal, tax, or compliance advice.
+        </p>
+        <p class="coypright">
+          <a href="https://dohrx.com/privacy-policy">Privacy Policy</a> |
+          <a href="https://dohrx.com/terms-of-service">Terms of Service</a> |
+          <a href="https://dohrx.com/hipaa-compliance">HIPAA Statement</a> |
+          <a href="https://dohrx.com/contact">Contact Information</a>
+        </p>
+      </div>
+    </footer>
+    <!-- accidental popup -->
+    <div id="accidental-popup" class="accidental-popup">
+      <svg
+        class="close-x"
+        width="42"
+        height="42"
+        viewBox="0 0 42 42"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.2 33.25L8.75 30.8L18.55 21L8.75 11.2L11.2 8.75L21 18.55L30.8 8.75L33.25 11.2L23.45 21L33.25 30.8L30.8 33.25L21 23.45L11.2 33.25Z"
+          fill="#383838"
+        />
+      </svg>
+
+      <section class="hero" id="herosection">
+        <div class="container hero__container">
+          <img
+            class="plus1"
+            src="./images/plus-icon.svg"
+            alt="bg plus icon"
+            height="120"
+            width="150"
+          />
+          <img
+            class="plus2"
+            src="./images/plus-icon-2.svg"
+            alt="bg plus icon"
+            height="120"
+            width="150"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span class="text-highlight">GET COMPLETE</span><br />
+              <span class="text-highlight">12-MONTH EOB AUDIT</span>
+            </h1>
+            <p class="hero__subtitle bolder">No Recovery = No Payment</p>
+            <p class="hero__subtitle">
+              We audit your EOBs to uncover underpaid claims, missed postings,
+              and overlooked denials. On average, we identify 11.3%
+              underpayments and recover 40–60% of the amount.
+            </p>
+            <div class="hero_pricing-wrapper">
+              <div class="hero__pricing-box">
+                Guaranteed recovery. Limited-time offer.
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="hero__form-wrapper">
+            <div class="lead-form">
+              <h3>
+                Free 30-Minute Practice Operations<br />
+                Review (30 mins | One-On-One)
+              </h3>
+              <form class="contact-us popup-form">
+                <div class="form-group">
+                  <label for="first_name">First Name *</label>
+                  <input
+                    type="text"
+                    id="first_name"
+                    class="first_name"
+                    name="first_name"
+                    placeholder="Dr. John"
+                  />
+                  <span class="error-msg" id="first-name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="last_name">Last Name *</label>
+                  <input
+                    type="text"
+                    id="last_name"
+                    class="last_name"
+                    name="last_name"
+                    placeholder="Smith"
+                  />
+                  <span class="error-msg" id="last-name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Work Email *</label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    class="email"
+                    placeholder="@gmail.com"
+                    name="email"
+                  />
+                  <span class="error-msg" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Contact Number *</label>
+                  <input
+                    type="tel"
+                    maxlength="10"
+                    id="phone"
+                    class="phone"
+                    name="phone"
+                    placeholder="(555) 123-4567"
+                  />
+                  <span class="error-msg" id="phone-error"></span>
+                </div>
+
+                <!-- UTM and Campaign Fields -->
+                <input
+                  id="utm_campaign"
+                  class="utm_campaign"
+                  name="utm_campaign"
+                  type="hidden"
+                />
+                <input
+                  id="utm_content"
+                  class="utm_content"
+                  name="utm_content"
+                  type="hidden"
+                />
+                <input
+                  id="lead_source"
+                  class="lead_source"
+                  name="lead_source"
+                  value="Website"
+                  type="hidden"
+                />
+                <input
+                  id="utm_medium"
+                  class="utm_medium"
+                  name="utm_medium"
+                  type="hidden"
+                />
+
+                <input
+                  id="utm_source"
+                  class="utm_source"
+                  name="utm_source"
+                  type="hidden"
+                />
+
+                <input
+                  id="utm_term"
+                  class="utm_term"
+                  name="utm_term"
+                  type="hidden"
+                />
+
+                <input
+                  id="page_url"
+                  class="page_url"
+                  name="page_url"
+                  type="hidden"
+                />
+                <button type="submit" class="btn btn--primary btn-submit">
+                  Claim Your Lost Revenue, Risk-Free
+                </button>
+
+                <div
+                  id="success-message"
+                  style="
+                    display: none;
+                    color: #28a745;
+                    margin-top: 10px;
+                    font-weight: 500;
+                  "
+                >
+                  Thank you! We will contact you soon.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.btn11 {
+  background: linear-gradient(
+    90deg,
+    rgba(41, 96, 234, 1) 0%,
+    rgba(211, 40, 124, 1) 100%
+  );
+  padding: rem(10px) rem(20px);
+  border-radius: rem(55px);
+  color: white;
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(211, 40, 124, 1) 0%,
+      rgba(41, 96, 234, 1) 100%
+    );
+  }
+  
+}

@@ -22,17 +22,7 @@ export default async function handler(req, res) {
       phone,
       practiceName,
       message,
-      utmSource,
-      utmMedium,
-      utmCampaign,
-      utmContent,
-      utmTerm,
-      // Accept form field names from existing landing pages
-      utm_source,
-      utm_medium,
-      utm_campaign,
-      utm_content,
-      utm_term,
+      date,
       practice_name,
       company,
     } = body;
@@ -68,67 +58,45 @@ export default async function handler(req, res) {
     const firstName = nameParts[0];
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : ".";
 
-    // Get Zoho access token
-    const tokenParams = new URLSearchParams({
-      refresh_token: process.env.ZOHO_REFRESH_TOKEN,
-      client_id: process.env.ZOHO_CLIENT_ID,
-      client_secret: process.env.ZOHO_CLIENT_SECRET,
-      grant_type: "refresh_token",
+    // Build description from message + date
+    const descParts = [];
+    if (message) descParts.push(`Message: ${message}`);
+    if (date) descParts.push(`Preferred Date: ${date}`);
+    const description = descParts.join("\n");
+
+    // Build Web-to-Lead form params
+    const params = new URLSearchParams({
+      xnQsjsdp: "941d8efc16780ea6427c54ab044bc9d1f59c33f838bbe389454fa3b1a967bc17",
+      xmIwtLD: "ca2d7416814e7f433b84835405e7fac3532ca7529cd119a3cd40bf5030c3c955c0102c79c0dc8823585952331a80ce16",
+      actionType: "TGVhZHM=",
+      zc_gad: "",
+      "aG9uZXlwb3Q": "",
+      "Last Name": lastName,
+      "First Name": firstName,
+      "Email": email.trim(),
+      "Phone": phone || "",
+      "Company": practiceName || practice_name || company || "",
+      "Description": description,
+      "Lead Source": "Advertisement",
     });
 
-    const tokenRes = await fetch("https://accounts.zoho.com/oauth/v2/token", {
+    const zohoRes = await fetch("https://crm.zoho.com/crm/WebToLeadForm", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: tokenParams.toString(),
+      body: params.toString(),
+      redirect: "manual",
     });
 
-    const tokenData = await tokenRes.json();
-    if (!tokenData.access_token) {
-      console.error("Zoho token error:", tokenData);
-      return res.status(500).json({ success: false, error: "CRM authentication failed" });
-    }
-
-    // Create lead in Zoho CRM
-    const leadData = {
-      data: [
-        {
-          First_Name: firstName,
-          Last_Name: lastName,
-          Email: email.trim(),
-          Phone: phone || "",
-          Company: practiceName || practice_name || company || "",
-          Description: message || "",
-          Lead_Source: "Landing Page",
-          Lead_Status: "Not Contacted",
-          UTM_Source: utmSource || utm_source || "",
-          UTM_Medium: utmMedium || utm_medium || "",
-          UTM_Campaign: utmCampaign || utm_campaign || "",
-        },
-      ],
-      // Trigger Zoho CRM workflow rules (including email notification workflows)
-      trigger: ["workflow", "approval", "blueprint"],
-    };
-
-    const crmRes = await fetch("https://www.zohoapis.com/crm/v2/Leads", {
-      method: "POST",
-      headers: {
-        Authorization: `Zoho-oauthtoken ${tokenData.access_token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(leadData),
-    });
-
-    const crmData = await crmRes.json();
-
-    if (crmData.data && crmData.data[0] && crmData.data[0].status === "success") {
+    // Zoho returns a 3xx redirect on success
+    if (zohoRes.status >= 200 && zohoRes.status < 400) {
       return res.status(200).json({
         success: true,
         message: "Thank you, we'll be in touch shortly.",
       });
     }
 
-    console.error("Zoho CRM error:", JSON.stringify(crmData));
-    return res.status(500).json({ success: false, error: "Failed to submit lead" });
+    console.error("Zoho WebToLead error: status", zohoRes.status);
+    return res.status(500).json({ success: false, error: "Submission failed" });
   } catch (err) {
     console.error("Server error:", err);
     return res.status(500).json({ success: false, error: "Internal server error" });

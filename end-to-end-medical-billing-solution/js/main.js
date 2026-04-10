@@ -319,9 +319,7 @@ $(".contact-us").on("submit", function (e) {
     .then((data) => {
       if (data.success) {
         const loc = window.location;
-        const cleanPath = loc.pathname.replace(/\/$/, "");
-        window.location.href =
-          loc.origin + cleanPath + "/thank-you.html" + loc.search;
+        window.location.href = loc.origin + "/thank-you/" + loc.search;
       } else {
         $form.find(".form-error").remove();
         $("<div/>", {

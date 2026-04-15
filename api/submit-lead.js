@@ -14,6 +14,28 @@ export default async function handler(req, res) {
 
   try {
     const body = req.body || {};
+
+    // Honeypot spam protection — if this hidden field has any value, it's a bot
+    const honeypot = body.website_url;
+    if (honeypot) {
+      return res.status(200).json({
+        success: true,
+        message: "Thank you, we'll be in touch shortly.",
+      });
+    }
+
+    // Timing check — reject if form submitted in under 3 seconds (bot speed)
+    const renderedAt = parseInt(body.form_rendered_at, 10);
+    if (renderedAt) {
+      const elapsed = Date.now() - renderedAt;
+      if (elapsed < 3000) {
+        return res.status(200).json({
+          success: true,
+          message: "Thank you, we'll be in touch shortly.",
+        });
+      }
+    }
+
     const {
       name,
       first_name,

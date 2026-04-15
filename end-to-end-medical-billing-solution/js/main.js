@@ -1,5 +1,6 @@
 $(function () {
   console.log("jQuery is ready!");
+  $(".form_rendered_at").val(Date.now().toString());
 });
 
 flatpickr(".date", {

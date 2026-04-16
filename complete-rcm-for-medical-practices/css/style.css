@@ -934,6 +934,21 @@ html {
   flex-wrap: wrap;
   gap: 0.3125rem;
 }
+/* Two-column form layout */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+
 .lead-form .form-group {
   margin-bottom: 0.625rem;
   position: relative;

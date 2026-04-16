@@ -15,9 +15,7 @@
   <link rel="icon" href="./images/favicon.png" type="image/png" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://go.dohrx.com/best-medical-billing-services/" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="css/style.css" />
 
@@ -163,12 +161,76 @@
               <input type="tel" maxlength="10" id="phone" class="phone" name="phone" placeholder="(555) 123-4567" />
               <span class="error-msg" id="phone-error"></span>
             </div>
-            <div class="form-group">
-              <label for="date">Date selection *</label>
-              <input type="text" id="date" class="date" name="date_selection" autocomplete="off"
-                placeholder="mm/dd/yyyy" />
-              <span class="error-msg" id="date-error"></span>
-            </div>
+              <div class="form-group">
+                <label for="practice_name">Practice Name *</label>
+                <input
+                  type="text"
+                  id="practice_name"
+                  class="practice_name"
+                  name="practice_name"
+                  placeholder="e.g. Sunrise Family Medicine"
+                  required
+                />
+                <span class="error-msg" id="practice-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="specialty">Specialty *</label>
+                <select id="specialty" class="specialty" name="specialty" required>
+                  <option value="" disabled selected>Select your specialty</option>
+                  <option value="Primary Care / Family Medicine">Primary Care / Family Medicine</option>
+                  <option value="Optometry">Optometry</option>
+                  <option value="Ophthalmology">Ophthalmology</option>
+                  <option value="Dental">Dental</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="OB/GYN">OB/GYN</option>
+                  <option value="Mental Health / Counseling">Mental Health / Counseling</option>
+                  <option value="Chiropractic">Chiropractic</option>
+                  <option value="Physical Therapy / Rehab">Physical Therapy / Rehab</option>
+                  <option value="Urgent Care">Urgent Care</option>
+                  <option value="Pain Management">Pain Management</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="specialty-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="num_providers">Number of Providers *</label>
+                <select id="num_providers" class="num_providers" name="num_providers" required>
+                  <option value="" disabled selected>How many providers?</option>
+                  <option value="Solo (1)">Solo Practice (1)</option>
+                  <option value="Small (2-5)">Small Group (2–5)</option>
+                  <option value="Mid-Size (6-10)">Mid-Size (6–10)</option>
+                  <option value="Large (10+)">Large Group (10+)</option>
+                </select>
+                <span class="error-msg" id="num-providers-error"></span>
+              </div>
+              <div class="form-group">
+                <label>How would you like us to reach you? *</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Phone" checked /> Phone
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Email" /> Email
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Both" /> Both
+                  </label>
+                </div>
+                <span class="error-msg" id="contact-method-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="best_time">Best Time to Reach You *</label>
+                <select id="best_time" class="best_time" name="best_time" required>
+                  <option value="" disabled selected>Select preferred time</option>
+                  <option value="Morning (8am–12pm)">Morning (8am–12pm)</option>
+                  <option value="Afternoon (12pm–5pm)">Afternoon (12pm–5pm)</option>
+                  <option value="Evening (5pm–8pm)">Evening (5pm–8pm)</option>
+                </select>
+                <span class="error-msg" id="best-time-error"></span>
+              </div>
 
             <!-- UTM and Campaign Fields -->
             <input id="utm_campaign" class="utm_campaign" name="utm_campaign" type="hidden" />
@@ -312,10 +374,74 @@
                 <span class="error-msg" id="phone-error_popup"></span>
               </div>
               <div class="form-group">
-                <label for="date_popup">Date selection *</label>
-                <input type="text" id="date_popup" class="date" name="date_selection" autocomplete="off"
-                  placeholder="mm/dd/yyyy" />
-                <span class="error-msg" id="date-error_popup"></span>
+                <label for="practice_name">Practice Name *</label>
+                <input
+                  type="text"
+                  id="practice_name"
+                  class="practice_name"
+                  name="practice_name"
+                  placeholder="e.g. Sunrise Family Medicine"
+                  required
+                />
+                <span class="error-msg" id="practice-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="specialty">Specialty *</label>
+                <select id="specialty" class="specialty" name="specialty" required>
+                  <option value="" disabled selected>Select your specialty</option>
+                  <option value="Primary Care / Family Medicine">Primary Care / Family Medicine</option>
+                  <option value="Optometry">Optometry</option>
+                  <option value="Ophthalmology">Ophthalmology</option>
+                  <option value="Dental">Dental</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="OB/GYN">OB/GYN</option>
+                  <option value="Mental Health / Counseling">Mental Health / Counseling</option>
+                  <option value="Chiropractic">Chiropractic</option>
+                  <option value="Physical Therapy / Rehab">Physical Therapy / Rehab</option>
+                  <option value="Urgent Care">Urgent Care</option>
+                  <option value="Pain Management">Pain Management</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="specialty-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="num_providers">Number of Providers *</label>
+                <select id="num_providers" class="num_providers" name="num_providers" required>
+                  <option value="" disabled selected>How many providers?</option>
+                  <option value="Solo (1)">Solo Practice (1)</option>
+                  <option value="Small (2-5)">Small Group (2–5)</option>
+                  <option value="Mid-Size (6-10)">Mid-Size (6–10)</option>
+                  <option value="Large (10+)">Large Group (10+)</option>
+                </select>
+                <span class="error-msg" id="num-providers-error"></span>
+              </div>
+              <div class="form-group">
+                <label>How would you like us to reach you? *</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Phone" checked /> Phone
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Email" /> Email
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Both" /> Both
+                  </label>
+                </div>
+                <span class="error-msg" id="contact-method-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="best_time">Best Time to Reach You *</label>
+                <select id="best_time" class="best_time" name="best_time" required>
+                  <option value="" disabled selected>Select preferred time</option>
+                  <option value="Morning (8am–12pm)">Morning (8am–12pm)</option>
+                  <option value="Afternoon (12pm–5pm)">Afternoon (12pm–5pm)</option>
+                  <option value="Evening (5pm–8pm)">Evening (5pm–8pm)</option>
+                </select>
+                <span class="error-msg" id="best-time-error"></span>
               </div>
 
               <input id="utm_campaign" class="utm_campaign" name="utm_campaign" type="hidden" />
@@ -1348,9 +1474,74 @@
                 <span class="error-msg" id="phone-error"></span>
               </div>
               <div class="form-group">
-                <input type="text" id="date" class="date" name="date_selection" autocomplete="off"
-                  placeholder="Date selection" />
-                <span class="error-msg" id="date-error"></span>
+                <label for="practice_name">Practice Name *</label>
+                <input
+                  type="text"
+                  id="practice_name"
+                  class="practice_name"
+                  name="practice_name"
+                  placeholder="e.g. Sunrise Family Medicine"
+                  required
+                />
+                <span class="error-msg" id="practice-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="specialty">Specialty *</label>
+                <select id="specialty" class="specialty" name="specialty" required>
+                  <option value="" disabled selected>Select your specialty</option>
+                  <option value="Primary Care / Family Medicine">Primary Care / Family Medicine</option>
+                  <option value="Optometry">Optometry</option>
+                  <option value="Ophthalmology">Ophthalmology</option>
+                  <option value="Dental">Dental</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="OB/GYN">OB/GYN</option>
+                  <option value="Mental Health / Counseling">Mental Health / Counseling</option>
+                  <option value="Chiropractic">Chiropractic</option>
+                  <option value="Physical Therapy / Rehab">Physical Therapy / Rehab</option>
+                  <option value="Urgent Care">Urgent Care</option>
+                  <option value="Pain Management">Pain Management</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="specialty-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="num_providers">Number of Providers *</label>
+                <select id="num_providers" class="num_providers" name="num_providers" required>
+                  <option value="" disabled selected>How many providers?</option>
+                  <option value="Solo (1)">Solo Practice (1)</option>
+                  <option value="Small (2-5)">Small Group (2–5)</option>
+                  <option value="Mid-Size (6-10)">Mid-Size (6–10)</option>
+                  <option value="Large (10+)">Large Group (10+)</option>
+                </select>
+                <span class="error-msg" id="num-providers-error"></span>
+              </div>
+              <div class="form-group">
+                <label>How would you like us to reach you? *</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Phone" checked /> Phone
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Email" /> Email
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Both" /> Both
+                  </label>
+                </div>
+                <span class="error-msg" id="contact-method-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="best_time">Best Time to Reach You *</label>
+                <select id="best_time" class="best_time" name="best_time" required>
+                  <option value="" disabled selected>Select preferred time</option>
+                  <option value="Morning (8am–12pm)">Morning (8am–12pm)</option>
+                  <option value="Afternoon (12pm–5pm)">Afternoon (12pm–5pm)</option>
+                  <option value="Evening (5pm–8pm)">Evening (5pm–8pm)</option>
+                </select>
+                <span class="error-msg" id="best-time-error"></span>
               </div>
 
               <!-- UTM and Campaign Fields -->
@@ -1470,11 +1661,76 @@
               <input type="tel" maxlength="10" id="phone" class="phone" name="phone" placeholder="(555) 123-4567" />
               <span class="error-msg" id="phone-error"></span>
             </div>
-            <div class="form-group">
-              <input type="text" id="date" class="date" name="date_selection" autocomplete="off"
-                placeholder="Date selection" />
-              <span class="error-msg" id="date-error"></span>
-            </div>
+              <div class="form-group">
+                <label for="practice_name">Practice Name *</label>
+                <input
+                  type="text"
+                  id="practice_name"
+                  class="practice_name"
+                  name="practice_name"
+                  placeholder="e.g. Sunrise Family Medicine"
+                  required
+                />
+                <span class="error-msg" id="practice-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="specialty">Specialty *</label>
+                <select id="specialty" class="specialty" name="specialty" required>
+                  <option value="" disabled selected>Select your specialty</option>
+                  <option value="Primary Care / Family Medicine">Primary Care / Family Medicine</option>
+                  <option value="Optometry">Optometry</option>
+                  <option value="Ophthalmology">Ophthalmology</option>
+                  <option value="Dental">Dental</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="OB/GYN">OB/GYN</option>
+                  <option value="Mental Health / Counseling">Mental Health / Counseling</option>
+                  <option value="Chiropractic">Chiropractic</option>
+                  <option value="Physical Therapy / Rehab">Physical Therapy / Rehab</option>
+                  <option value="Urgent Care">Urgent Care</option>
+                  <option value="Pain Management">Pain Management</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="specialty-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="num_providers">Number of Providers *</label>
+                <select id="num_providers" class="num_providers" name="num_providers" required>
+                  <option value="" disabled selected>How many providers?</option>
+                  <option value="Solo (1)">Solo Practice (1)</option>
+                  <option value="Small (2-5)">Small Group (2–5)</option>
+                  <option value="Mid-Size (6-10)">Mid-Size (6–10)</option>
+                  <option value="Large (10+)">Large Group (10+)</option>
+                </select>
+                <span class="error-msg" id="num-providers-error"></span>
+              </div>
+              <div class="form-group">
+                <label>How would you like us to reach you? *</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Phone" checked /> Phone
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Email" /> Email
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Both" /> Both
+                  </label>
+                </div>
+                <span class="error-msg" id="contact-method-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="best_time">Best Time to Reach You *</label>
+                <select id="best_time" class="best_time" name="best_time" required>
+                  <option value="" disabled selected>Select preferred time</option>
+                  <option value="Morning (8am–12pm)">Morning (8am–12pm)</option>
+                  <option value="Afternoon (12pm–5pm)">Afternoon (12pm–5pm)</option>
+                  <option value="Evening (5pm–8pm)">Evening (5pm–8pm)</option>
+                </select>
+                <span class="error-msg" id="best-time-error"></span>
+              </div>
 
             <!-- UTM and Campaign Fields -->
             <input id="utm_campaign" class="utm_campaign" name="utm_campaign" type="hidden" />
@@ -1584,6 +1840,76 @@
                 <input type="tel" maxlength="10" id="phone" class="phone" name="phone" placeholder="(555) 123-4567" />
                 <span class="error-msg" id="phone-error"></span>
               </div>
+              <div class="form-group">
+                <label for="practice_name">Practice Name *</label>
+                <input
+                  type="text"
+                  id="practice_name"
+                  class="practice_name"
+                  name="practice_name"
+                  placeholder="e.g. Sunrise Family Medicine"
+                  required
+                />
+                <span class="error-msg" id="practice-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="specialty">Specialty *</label>
+                <select id="specialty" class="specialty" name="specialty" required>
+                  <option value="" disabled selected>Select your specialty</option>
+                  <option value="Primary Care / Family Medicine">Primary Care / Family Medicine</option>
+                  <option value="Optometry">Optometry</option>
+                  <option value="Ophthalmology">Ophthalmology</option>
+                  <option value="Dental">Dental</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="OB/GYN">OB/GYN</option>
+                  <option value="Mental Health / Counseling">Mental Health / Counseling</option>
+                  <option value="Chiropractic">Chiropractic</option>
+                  <option value="Physical Therapy / Rehab">Physical Therapy / Rehab</option>
+                  <option value="Urgent Care">Urgent Care</option>
+                  <option value="Pain Management">Pain Management</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="specialty-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="num_providers">Number of Providers *</label>
+                <select id="num_providers" class="num_providers" name="num_providers" required>
+                  <option value="" disabled selected>How many providers?</option>
+                  <option value="Solo (1)">Solo Practice (1)</option>
+                  <option value="Small (2-5)">Small Group (2–5)</option>
+                  <option value="Mid-Size (6-10)">Mid-Size (6–10)</option>
+                  <option value="Large (10+)">Large Group (10+)</option>
+                </select>
+                <span class="error-msg" id="num-providers-error"></span>
+              </div>
+              <div class="form-group">
+                <label>How would you like us to reach you? *</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Phone" checked /> Phone
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Email" /> Email
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="contact_method" value="Both" /> Both
+                  </label>
+                </div>
+                <span class="error-msg" id="contact-method-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="best_time">Best Time to Reach You *</label>
+                <select id="best_time" class="best_time" name="best_time" required>
+                  <option value="" disabled selected>Select preferred time</option>
+                  <option value="Morning (8am–12pm)">Morning (8am–12pm)</option>
+                  <option value="Afternoon (12pm–5pm)">Afternoon (12pm–5pm)</option>
+                  <option value="Evening (5pm–8pm)">Evening (5pm–8pm)</option>
+                </select>
+                <span class="error-msg" id="best-time-error"></span>
+              </div>
 
               <input id="utm_campaign" class="utm_campaign" name="utm_campaign" type="hidden" />
               <input id="utm_content" class="utm_content" name="utm_content" type="hidden" />
@@ -1619,8 +1945,7 @@
   </div> -->
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

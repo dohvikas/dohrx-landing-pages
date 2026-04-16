@@ -3,12 +3,6 @@ $(function () {
   $(".form_rendered_at").val(Date.now().toString());
 });
 
-flatpickr(".date", {
-  dateFormat: "m-d-Y",
-  minDate: "today",
-  disableMobile: true,
-});
-
 // Smooth scroll with offset for header CTA
 $('a[href=".contact-us"]').on("click", function (e) {
   e.preventDefault();
@@ -188,7 +182,7 @@ $(document).on("input", ".email", function () {
 
 // Form focus event for form start tracking
 let formStarted = false;
-$(".contact-us input").on("focus", function () {
+$(".contact-us input, .contact-us select").on("focus", function () {
   if (!formStarted) {
     dataLayer.push({ event: "AM_Form_Start" });
     formStarted = true;
@@ -283,20 +277,57 @@ $(".contact-us").on("submit", function (e) {
     getField("phone").removeClass("error");
   }
 
+
   /* -------------------------
-     DATE
+     PRACTICE NAME
   ------------------------- */
-  const dateField = getField("date_selection");
-  if (dateField.length) {
-    const date = dateField.val();
-    if (!date) {
-      getError("date-error").text("Date selection is required");
-      getField("date_selection").addClass("error");
-      isValid = false;
-    } else {
-      getError("date-error").text("");
-      getField("date_selection").removeClass("error");
-    }
+  const practiceName = getField("practice_name").val().trim();
+  if (!practiceName) {
+    getError("practice-name-error").text("Practice name is required");
+    getField("practice_name").addClass("error");
+    isValid = false;
+  } else {
+    getError("practice-name-error").text("");
+    getField("practice_name").removeClass("error");
+  }
+
+  /* -------------------------
+     SPECIALTY
+  ------------------------- */
+  const specialty = getField("specialty").val();
+  if (!specialty) {
+    getError("specialty-error").text("Please select a specialty");
+    getField("specialty").addClass("error");
+    isValid = false;
+  } else {
+    getError("specialty-error").text("");
+    getField("specialty").removeClass("error");
+  }
+
+  /* -------------------------
+     NUMBER OF PROVIDERS
+  ------------------------- */
+  const numProviders = getField("num_providers").val();
+  if (!numProviders) {
+    getError("num-providers-error").text("Please select number of providers");
+    getField("num_providers").addClass("error");
+    isValid = false;
+  } else {
+    getError("num-providers-error").text("");
+    getField("num_providers").removeClass("error");
+  }
+
+  /* -------------------------
+     BEST TIME
+  ------------------------- */
+  const bestTime = getField("best_time").val();
+  if (!bestTime) {
+    getError("best-time-error").text("Please select a preferred time");
+    getField("best_time").addClass("error");
+    isValid = false;
+  } else {
+    getError("best-time-error").text("");
+    getField("best_time").removeClass("error");
   }
 
   /* -------------------------

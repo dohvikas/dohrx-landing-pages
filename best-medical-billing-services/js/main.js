@@ -5,15 +5,6 @@
     console.log("jQuery is ready!");
     $(".form_rendered_at").val(Date.now().toString());
 
-    // Initialize Flatpickr
-    if (typeof flatpickr !== "undefined") {
-      flatpickr(".date", {
-        dateFormat: "m-d-Y",
-        minDate: "today",
-        disableMobile: true,
-      });
-    }
-
     // Smooth scroll with offset for header CTA
     $('a[href=".contact-us"]').on("click", function (e) {
       e.preventDefault();
@@ -253,15 +244,49 @@
         phoneField.removeClass("error");
       }
 
-      // Validate Date
-      const dateField = getField("date_selection");
-      if (dateField.length && !dateField.val()) {
-        getError("date_selection").text("Date is required");
-        dateField.addClass("error");
+      // Validate Practice Name
+      const practiceNameField = getField("practice_name");
+      const practiceNameVal = practiceNameField.val().trim();
+      if (!practiceNameVal) {
+        getError("practice_name").text("Practice name is required");
+        practiceNameField.addClass("error");
         isValid = false;
-      } else if (dateField.length) {
-        getError("date_selection").text("");
-        dateField.removeClass("error");
+      } else {
+        getError("practice_name").text("");
+        practiceNameField.removeClass("error");
+      }
+
+      // Validate Specialty
+      const specialtyField = getField("specialty");
+      if (!specialtyField.val()) {
+        getError("specialty").text("Please select a specialty");
+        specialtyField.addClass("error");
+        isValid = false;
+      } else {
+        getError("specialty").text("");
+        specialtyField.removeClass("error");
+      }
+
+      // Validate Number of Providers
+      const numProvidersField = getField("num_providers");
+      if (!numProvidersField.val()) {
+        getError("num_providers").text("Please select number of providers");
+        numProvidersField.addClass("error");
+        isValid = false;
+      } else {
+        getError("num_providers").text("");
+        numProvidersField.removeClass("error");
+      }
+
+      // Validate Best Time
+      const bestTimeField = getField("best_time");
+      if (!bestTimeField.val()) {
+        getError("best_time").text("Please select a preferred time");
+        bestTimeField.addClass("error");
+        isValid = false;
+      } else {
+        getError("best_time").text("");
+        bestTimeField.removeClass("error");
       }
 
       if (!isValid) return;

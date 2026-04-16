@@ -43,10 +43,14 @@ export default async function handler(req, res) {
       email,
       phone,
       practiceName,
-      message,
-      date,
       practice_name,
       company,
+      message,
+      date,
+      specialty,
+      num_providers,
+      contact_method,
+      best_time,
     } = body;
 
     // Build full name from either combined name or first/last
@@ -75,13 +79,21 @@ export default async function handler(req, res) {
       }
     }
 
+    const practiceNameVal = practice_name || practiceName || company;
+    if (!practiceNameVal || !practiceNameVal.trim()) {
+      return res.status(400).json({ success: false, error: "Practice name is required" });
+    }
+
     // Split name into first/last for Zoho
     const nameParts = fullName.trim().split(/\s+/);
     const firstName = nameParts[0];
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : ".";
 
-    // Build description from message + date
+    // Build description from qualifying fields
     const descParts = [];
+    if (num_providers) descParts.push(`Providers: ${num_providers}`);
+    if (contact_method) descParts.push(`Contact via: ${contact_method}`);
+    if (best_time) descParts.push(`Best time: ${best_time}`);
     if (message) descParts.push(`Message: ${message}`);
     if (date) descParts.push(`Preferred Date: ${date}`);
     const description = descParts.join("\n");
@@ -98,6 +110,7 @@ export default async function handler(req, res) {
       "Email": email.trim(),
       "Phone": phone || "",
       "Company": practiceName || practice_name || company || "",
+      "Industry": specialty || "",
       "Description": description,
       "Lead Source": "Advertisement",
     });
